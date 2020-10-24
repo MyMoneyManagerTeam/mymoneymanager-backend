@@ -24,49 +24,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a471809-f355-4591-a512-e5f8f5a49a17" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Domain/Controllers/WeatherForecastController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Domain/Domain.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Domain/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Domain/Properties/launchSettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Domain/Startup.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Domain/WeatherForecast.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Domain/appsettings.Development.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Domain/appsettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Domain/obj/Debug/netcoreapp3.1/.NETCoreApp,Version=v3.1.AssemblyAttributes.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Domain/obj/Debug/netcoreapp3.1/Domain.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Domain/obj/Debug/netcoreapp3.1/Domain.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Domain/obj/project.packagespec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Infrastructure/Controllers/WeatherForecastController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Infrastructure/Infrastructure.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Infrastructure/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Infrastructure/Properties/launchSettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Infrastructure/Startup.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Infrastructure/WeatherForecast.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Infrastructure/appsettings.Development.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Infrastructure/appsettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Infrastructure/obj/Debug/netcoreapp3.1/.NETCoreApp,Version=v3.1.AssemblyAttributes.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Infrastructure/obj/Debug/netcoreapp3.1/Infrastructure.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Infrastructure/obj/Debug/netcoreapp3.1/Infrastructure.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Infrastructure/obj/project.packagespec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebAPI/WebAPI.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebAPI/obj/Debug/netcoreapp3.1/.NETCoreApp,Version=v3.1.AssemblyAttributes.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebAPI/obj/Debug/netcoreapp3.1/MyMoneyManagerBackend.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebAPI/obj/Debug/netcoreapp3.1/MyMoneyManagerBackend.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebAPI/obj/Debug/netcoreapp3.1/MyMoneyManagerBackend.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebAPI/obj/Debug/netcoreapp3.1/MyMoneyManagerBackend.csprojAssemblyReference.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebAPI/obj/Debug/netcoreapp3.1/WebAPI.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebAPI/obj/Debug/netcoreapp3.1/WebAPI.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebAPI/obj/Debug/netcoreapp3.1/WebAPI.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebAPI/obj/MyMoneyManagerBackend.csproj.nuget.dgspec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebAPI/obj/MyMoneyManagerBackend.csproj.nuget.g.props" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebAPI/obj/MyMoneyManagerBackend.csproj.nuget.g.targets" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebAPI/obj/project.assets.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebAPI/obj/project.nuget.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebAPI/obj/project.packagespec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebAPI/obj/rider.project.restore.info" afterDir="false" />
-    </list>
+    <list default="true" id="2a471809-f355-4591-a512-e5f8f5a49a17" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -196,7 +154,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1603571597777</updated>
-      <workItem from="1603571605316" duration="402000" />
+      <workItem from="1603571605316" duration="1075000" />
     </task>
     <servers />
   </component>
