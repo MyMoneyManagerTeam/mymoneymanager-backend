@@ -15,7 +15,14 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
-        "projectReferences": {}
+        "projectReferences": {
+          "C:\\Users\\lopez\\Documents\\GitHub\\mymoneymanager-backend\\MyMoneyManagerBackend\\Domain\\Domain.csproj": {
+            "projectPath": "C:\\Users\\lopez\\Documents\\GitHub\\mymoneymanager-backend\\MyMoneyManagerBackend\\Domain\\Domain.csproj"
+          },
+          "C:\\Users\\lopez\\Documents\\GitHub\\mymoneymanager-backend\\MyMoneyManagerBackend\\Infrastructure\\Infrastructure.csproj": {
+            "projectPath": "C:\\Users\\lopez\\Documents\\GitHub\\mymoneymanager-backend\\MyMoneyManagerBackend\\Infrastructure\\Infrastructure.csproj"
+          }
+        }
       }
     },
     "warningProperties": {
@@ -27,9 +34,17 @@
   "frameworks": {
     "netcoreapp3.1": {
       "dependencies": {
+        "Microsoft.AspNet.WebApi.Cors": {
+          "target": "Package",
+          "version": "[5.2.7, )"
+        },
         "System.Data.SqlClient": {
           "target": "Package",
           "version": "[4.8.2, )"
+        },
+        "System.IdentityModel.Tokens.Jwt": {
+          "target": "Package",
+          "version": "[6.8.0, )"
         }
       },
       "imports": [
