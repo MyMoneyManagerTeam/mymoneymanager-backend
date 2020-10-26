@@ -50,6 +50,9 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="Controllers" t="Include">
           <e p="AuthController.cs" t="Include" />
+          <e p="Requests" t="Include">
+            <e p="SigninRequest.cs" t="Include" />
+          </e>
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
