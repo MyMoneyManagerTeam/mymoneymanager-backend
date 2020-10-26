@@ -9,6 +9,7 @@ namespace Domain.Users
         string Password { get; set; }
         string FirstName { get; set; }
         string LastName { get; set; }
+        byte[] Picture { get; set; }
         string Account { get; set; }
         string Token { get; set; }
     }

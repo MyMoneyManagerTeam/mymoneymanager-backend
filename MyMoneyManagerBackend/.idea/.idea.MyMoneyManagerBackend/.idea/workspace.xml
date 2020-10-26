@@ -25,28 +25,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2a471809-f355-4591-a512-e5f8f5a49a17" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Domain/Shared/IEntity.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Domain/Users/IUser.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Domain/Users/IUserRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Domain/Users/User.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Infrastructure/SqlServer/Auth/IUserFactory.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Infrastructure/SqlServer/Auth/SqlServerUserRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Infrastructure/SqlServer/Auth/UserFactory.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebAPI/Controllers/AuthController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MyMoneyManagerBackend/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyMoneyManagerBackend/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MyMoneyManagerBackend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyMoneyManagerBackend/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Domain.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Domain.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Infrastructure/Infrastructure.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Infrastructure.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Infrastructure/SqlServer/Database.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/SqlServer/Database.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Infrastructure/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebAPI/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebAPI/WebAPI.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/WebAPI.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebAPI/obj/Debug/netcoreapp3.1/WebAPI.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/obj/Debug/netcoreapp3.1/WebAPI.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebAPI/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebAPI/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebAPI/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebAPI/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Users/IUser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Users/IUser.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Users/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Users/User.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/SqlServer/Auth/SqlServerUserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/SqlServer/Auth/SqlServerUserRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/SqlServer/Auth/UserFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/SqlServer/Auth/UserFactory.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +38,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/051A8F29-384F-4B34-9211-78615BFA6F0C/1/System.Data.SqlClient.notsupported.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -66,12 +52,12 @@
         <option value="$PROJECT_DIR$/Domain/Shared/IEntity.cs" />
         <option value="$PROJECT_DIR$/Domain/Users/IUserRepository.cs" />
         <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Auth/IUserFactory.cs" />
-        <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Auth/SqlServerUserRepository.cs" />
-        <option value="$PROJECT_DIR$/Domain/Users/IUser.cs" />
-        <option value="$PROJECT_DIR$/Domain/Users/User.cs" />
-        <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Auth/UserFactory.cs" />
         <option value="$PROJECT_DIR$/WebAPI/Startup.cs" />
         <option value="$PROJECT_DIR$/WebAPI/Controllers/AuthController.cs" />
+        <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Auth/SqlServerUserRepository.cs" />
+        <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Auth/UserFactory.cs" />
+        <option value="$PROJECT_DIR$/Domain/Users/User.cs" />
+        <option value="$PROJECT_DIR$/Domain/Users/IUser.cs" />
       </list>
     </option>
   </component>
@@ -189,14 +175,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1603571597777</updated>
-      <workItem from="1603571605316" duration="11189000" />
+      <workItem from="1603571605316" duration="12512000" />
+      <workItem from="1603622390174" duration="6472000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -208,32 +195,33 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1877" height="349" key="GridCell.Tab.0.bottom" timestamp="1603585235917">
+    <state width="1877" height="349" key="GridCell.Tab.0.bottom" timestamp="1603679152041">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="349" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1603584474741" />
-    <state width="1877" height="349" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603585235917" />
-    <state width="1877" height="349" key="GridCell.Tab.0.center" timestamp="1603585235917">
+    <state width="1877" height="349" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603679152041" />
+    <state width="1877" height="349" key="GridCell.Tab.0.center" timestamp="1603679152041">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="349" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1603584474741" />
-    <state width="1877" height="349" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603585235917" />
-    <state width="1877" height="349" key="GridCell.Tab.0.left" timestamp="1603585235917">
+    <state width="1877" height="349" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603679152041" />
+    <state width="1877" height="349" key="GridCell.Tab.0.left" timestamp="1603679152041">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="349" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1603584474740" />
-    <state width="1877" height="349" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603585235917" />
-    <state width="1877" height="349" key="GridCell.Tab.0.right" timestamp="1603585235917">
+    <state width="1877" height="349" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603679152041" />
+    <state width="1877" height="349" key="GridCell.Tab.0.right" timestamp="1603679152041">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="349" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1603584474741" />
-    <state width="1877" height="349" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603585235917" />
+    <state width="1877" height="349" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603679152041" />
     <state x="552" y="252" key="Rider.ProjectTemplateDialog.Size" timestamp="1603572886135">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -242,6 +230,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1268" y="209" key="RiderGenerateDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603581813282" />
+    <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog" timestamp="1603624438214">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603624438214" />
     <state x="-1297" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1603584775437">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>

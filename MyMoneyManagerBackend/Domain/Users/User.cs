@@ -11,6 +11,7 @@ namespace Domain.Users
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Account { get; set; }
+        public byte[] Picture { get; set; }
         public string Token { get; set; }
 
         public User()

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Data;
 using Domain.Users;
 
@@ -13,10 +14,11 @@ namespace Infrastructure.SqlServer.Auth
         public static readonly string ColumnAccount = "account";
         public static readonly string ColumnFirstName = "firstname";
         public static readonly string ColumnLastName = "lastname";
+        public static readonly string ColumnPicture = "picture";
         
         public static readonly string ReqGet = $@"SELECT * FROM {TableName} WHERE {ColumnMail}=@{ColumnMail} AND {ColumnPassword}=@{ColumnPassword}";
         
-        private IUserFactory _userFactory = new UserFactory(); 
+        private IUserFactory _userFactory = new UserFactory();
         
         public IEnumerable<IUser> Query()
         {
