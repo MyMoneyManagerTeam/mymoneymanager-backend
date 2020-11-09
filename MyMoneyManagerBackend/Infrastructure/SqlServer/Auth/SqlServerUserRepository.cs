@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Net;
 using Domain.Users;
 
@@ -10,24 +11,25 @@ namespace Infrastructure.SqlServer.Auth
     public class SqlServerUserRepository : IUserRepository
     {
         public static readonly string TableName = "users";
-        public static readonly string ColumnId = "id";
+        public static readonly string ColumnId = "user_id";
         public static readonly string ColumnMail = "mail";
         public static readonly string ColumnPassword = "password";
-        public static readonly string ColumnAccount = "account";
-        public static readonly string ColumnFirstName = "firstname";
-        public static readonly string ColumnLastName = "lastname";
+        public static readonly string ColumnFirstName = "first_name";
+        public static readonly string ColumnLastName = "last_name";
         public static readonly string ColumnCity = "city";
         public static readonly string ColumnAddress = "address";
-        public static readonly string ColumnZipCode = "zipcode";
+        public static readonly string ColumnZipCode = "zip";
         public static readonly string ColumnArea = "area";
         public static readonly string ColumnCountry = "country";
+        public static readonly string ColumnConfirmed = "confirmed";
+        public static readonly string ColumnAdmin = "admin";
         public static readonly string ColumnPicture = "picture";
         
         public static readonly string ReqGet = $@"SELECT * FROM {TableName} WHERE {ColumnMail}=@{ColumnMail} AND {ColumnPassword}=@{ColumnPassword}";
         public static readonly string ReqCreate = $@"INSERT INTO {TableName}
-            ({ColumnMail},{ColumnPassword},{ColumnFirstName},{ColumnLastName},{ColumnPicture},{ColumnCountry},{ColumnArea},{ColumnAddress},{ColumnZipCode},{ColumnCity})
+            ({ColumnId},{ColumnMail},{ColumnPassword},{ColumnFirstName},{ColumnLastName},{ColumnCountry},{ColumnArea},{ColumnAddress},{ColumnZipCode},{ColumnCity},{ColumnPicture},{ColumnConfirmed},{ColumnAdmin})
             OUTPUT INSERTED.{ColumnId}            
-            VALUES (@{ColumnMail},@{ColumnPassword},@{ColumnFirstName},@{ColumnLastName},NULL,@{ColumnCountry},@{ColumnArea},@{ColumnAddress},@{ColumnZipCode},@{ColumnCity});
+            VALUES (NEWID(),@{ColumnMail},@{ColumnPassword},@{ColumnFirstName},@{ColumnLastName},@{ColumnCountry},@{ColumnArea},@{ColumnAddress},@{ColumnZipCode},@{ColumnCity},NULL,1,0);
         ";
         private IUserFactory _userFactory = new UserFactory();
         
@@ -65,24 +67,27 @@ namespace Infrastructure.SqlServer.Auth
                 var command = connection.CreateCommand();
                 // (@{ColumnMail},@{ColumnPassword},@{ColumnFirstName},@{ColumnLastName},@{ColumnPicture},@{ColumnCountry},@{ColumnArea},@{ColumnAddress},@{ColumnZipCode},@{ColumnCity})
                 command.CommandText = ReqCreate;
-                command.Parameters.AddWithValue($"@{ColumnMail}", user.Mail);
+                command.Parameters.AddWithValue($"@{ColumnMail}", user.Mail.ToLower());
                 command.Parameters.AddWithValue($"@{ColumnPassword}", user.Password);
                 command.Parameters.AddWithValue($"@{ColumnFirstName}", user.FirstName);
                 command.Parameters.AddWithValue($"@{ColumnLastName}", user.LastName);
                 command.Parameters.AddWithValue($"@{ColumnCountry}", user.Country);
                 command.Parameters.AddWithValue($"@{ColumnArea}", user.Area);
                 command.Parameters.AddWithValue($"@{ColumnAddress}", user.Address);
-                command.Parameters.AddWithValue($"@{ColumnZipCode}", user.ZipCode);
+                command.Parameters.AddWithValue($"@{ColumnZipCode}", user.Zip);
                 command.Parameters.AddWithValue($"@{ColumnCity}", user.City);
+                //command.Parameters.AddWithValue($"@{ColumnPicture}", ((object)user.Picture) ?? DBNull.Value);
                 try
                 {
-                    user.Id = (int) command.ExecuteScalar();
+                    user.Id = (Guid) command.ExecuteScalar();
+
                 }
-                catch (Exception ex)
+                catch (SqlException ex)
                 {
+                    return null;
                 }
-                
             }
+
             return user;
         }
 

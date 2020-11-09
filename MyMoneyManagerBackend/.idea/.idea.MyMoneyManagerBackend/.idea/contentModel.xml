@@ -5,8 +5,18 @@
     <e p="C:\Users\lopez\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_MyMoneyManagerBackend.1672478746.00" t="ExcludeRecursive" />
     <e p="C:\Users\lopez\Documents\GitHub\mymoneymanager-backend\MyMoneyManagerBackend" t="IncludeFlat">
       <e p="Domain" t="IncludeRecursive">
+        <e p="Accounts" t="Include">
+          <e p="Account.cs" t="Include" />
+          <e p="IAccount.cs" t="Include" />
+          <e p="IAccountRepository.cs" t="Include" />
+        </e>
         <e p="bin" t="ExcludeRecursive" />
         <e p="Domain.csproj" t="IncludeRecursive" />
+        <e p="Jars" t="Include">
+          <e p="IJar.cs" t="Include" />
+          <e p="IJarRepository.cs" t="Include" />
+          <e p="Jar.cs" t="Include" />
+        </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp3.1" t="Include">
@@ -16,6 +26,11 @@
         </e>
         <e p="Shared" t="Include">
           <e p="IEntity.cs" t="Include" />
+        </e>
+        <e p="Transactions" t="Include">
+          <e p="ITransaction.cs" t="Include" />
+          <e p="ITransactionRepository.cs" t="Include" />
+          <e p="Transaction.cs" t="Include" />
         </e>
         <e p="Users" t="Include">
           <e p="IUser.cs" t="Include" />
@@ -34,12 +49,27 @@
           </e>
         </e>
         <e p="SqlServer" t="Include">
+          <e p="Accounts" t="Include">
+            <e p="AccountFactory.cs" t="Include" />
+            <e p="IAccountFactory.cs" t="Include" />
+            <e p="SqlServerAccountRepository.cs" t="Include" />
+          </e>
           <e p="Auth" t="Include">
             <e p="IUserFactory.cs" t="Include" />
             <e p="SqlServerUserRepository.cs" t="Include" />
             <e p="UserFactory.cs" t="Include" />
           </e>
           <e p="Database.cs" t="Include" />
+          <e p="Jars" t="Include">
+            <e p="IJarFactory.cs" t="Include" />
+            <e p="JarFactory.cs" t="Include" />
+            <e p="SqlServerJarRepository.cs" t="Include" />
+          </e>
+          <e p="Transactions" t="Include">
+            <e p="ITransactionFactory.cs" t="Include" />
+            <e p="SqlServerTransactionRepository.cs" t="Include" />
+            <e p="TransactionFactory.cs" t="Include" />
+          </e>
         </e>
       </e>
       <e p="MyMoneyManagerBackend.sln" t="IncludeFlat" />

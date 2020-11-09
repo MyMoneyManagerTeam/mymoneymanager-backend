@@ -1,7 +1,9 @@
-﻿namespace Domain.Shared
+﻿using System;
+
+namespace Domain.Shared
 {
     public interface IEntity
     {
-        int Id { get; set; }
+        Guid Id { get; set; }
     }
 }

@@ -22,8 +22,7 @@ namespace Infrastructure.SqlServer.Auth
             }
             return new User()
             {
-                Id = reader.GetInt32(reader.GetOrdinal(SqlServerUserRepository.ColumnId)),
-                Account = reader.GetString(reader.GetOrdinal(SqlServerUserRepository.ColumnAccount)),
+                Id = reader.GetGuid(reader.GetOrdinal(SqlServerUserRepository.ColumnId)),
                 Mail = reader.GetString(reader.GetOrdinal(SqlServerUserRepository.ColumnMail)),
                 FirstName = reader.GetString(reader.GetOrdinal(SqlServerUserRepository.ColumnFirstName)),
                 Password = reader.GetString(reader.GetOrdinal(SqlServerUserRepository.ColumnPassword)),

@@ -15,7 +15,6 @@ namespace MyMoneyManagerBackend.Controllers
         [Route("[action]")]
         public ActionResult<IUser> Authenticate([FromBody] AuthenticateRequest req)
         {
-            Console.Write("Auth");
             var response = _userRepository.Get(req.Mail,req.Password);
             if (response == null)
             {
@@ -29,15 +28,14 @@ namespace MyMoneyManagerBackend.Controllers
         }
         [HttpPost]
         [Route("[action]")]
-        public ActionResult<IUser> Signin([FromBody] SigninRequest req)
+        public ActionResult<IUser> Signin([FromBody] User user)
         {
-            var response = _userRepository.Create(new User(int.MinValue,req.Mail,req.Password,req.FirstName,req.LastName,req.Country,req.Area,req.Address,int.Parse(req.ZipCode),req.City,null,null,null));
-            if (response.Id == int.MinValue)
+            var response = _userRepository.Create(user);
+            if (response==null)
             {
-                return BadRequest(
-                    new {message = "Utilisateur déjà inscrit"});
+                return BadRequest(new {message="Un compte existe déjà pour cette adresse mail"});
             }
-            
+
             return Ok(response);
         }
     }
@@ -46,18 +44,5 @@ namespace MyMoneyManagerBackend.Controllers
     {
         public string Mail { get; set; }
         public string Password { get; set; }
-    }
-
-    public class SigninRequest
-    {
-        public string Mail { get; set; }
-        public string Password { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string Country { get; set; }
-        public string Area { get; set; }
-        public string Address { get; set; }
-        public string ZipCode { get; set; }
-        public string City { get; set; }
     }
 }
