@@ -1612,6 +1612,19 @@
           "lib/netstandard1.3/System.Xml.XmlDocument.dll": {}
         }
       },
+      "Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Application.dll": {}
+        }
+      },
       "Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
@@ -1631,7 +1644,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
-          "Domain": "1.0.0",
+          "Application": "1.0.0",
           "Microsoft.AspNet.WebApi.Cors": "5.2.7",
           "System.Data.SqlClient": "4.8.2",
           "System.IdentityModel.Tokens.Jwt": "6.8.0"
@@ -5923,6 +5936,11 @@
         "system.xml.xmldocument.nuspec"
       ]
     },
+    "Application/1.0.0": {
+      "type": "project",
+      "path": "../Application/Application.csproj",
+      "msbuildProject": "../Application/Application.csproj"
+    },
     "Domain/1.0.0": {
       "type": "project",
       "path": "../Domain/Domain.csproj",
@@ -5936,7 +5954,6 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "Domain >= 1.0.0",
       "Infrastructure >= 1.0.0",
       "Microsoft.AspNet.WebApi.Cors >= 5.2.7",
       "System.Data.SqlClient >= 4.8.2",
@@ -5969,9 +5986,6 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\lopez\\Documents\\GitHub\\mymoneymanager-backend\\MyMoneyManagerBackend\\Domain\\Domain.csproj": {
-              "projectPath": "C:\\Users\\lopez\\Documents\\GitHub\\mymoneymanager-backend\\MyMoneyManagerBackend\\Domain\\Domain.csproj"
-            },
             "C:\\Users\\lopez\\Documents\\GitHub\\mymoneymanager-backend\\MyMoneyManagerBackend\\Infrastructure\\Infrastructure.csproj": {
               "projectPath": "C:\\Users\\lopez\\Documents\\GitHub\\mymoneymanager-backend\\MyMoneyManagerBackend\\Infrastructure\\Infrastructure.csproj"
             }

@@ -16,8 +16,8 @@
     "frameworks": {
       "netcoreapp3.1": {
         "projectReferences": {
-          "C:\\Users\\lopez\\Documents\\GitHub\\mymoneymanager-backend\\MyMoneyManagerBackend\\Domain\\Domain.csproj": {
-            "projectPath": "C:\\Users\\lopez\\Documents\\GitHub\\mymoneymanager-backend\\MyMoneyManagerBackend\\Domain\\Domain.csproj"
+          "C:\\Users\\lopez\\Documents\\GitHub\\mymoneymanager-backend\\MyMoneyManagerBackend\\Application\\Application.csproj": {
+            "projectPath": "C:\\Users\\lopez\\Documents\\GitHub\\mymoneymanager-backend\\MyMoneyManagerBackend\\Application\\Application.csproj"
           }
         }
       }

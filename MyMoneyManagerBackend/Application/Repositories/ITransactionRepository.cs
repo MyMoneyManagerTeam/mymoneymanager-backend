@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using Domain.Users;
 
-namespace Domain.Transactions
+namespace Application.Repositories
 {
     public interface ITransactionRepository
     {

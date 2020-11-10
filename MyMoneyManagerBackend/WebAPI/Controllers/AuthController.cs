@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Net.Http;
+using Application.Repositories;
 using Domain.Users;
 using Infrastructure.SqlServer.Auth;
 using Microsoft.AspNetCore.Mvc;

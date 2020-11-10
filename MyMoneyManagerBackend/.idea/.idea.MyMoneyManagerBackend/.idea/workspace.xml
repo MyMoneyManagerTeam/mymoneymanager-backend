@@ -24,7 +24,29 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a471809-f355-4591-a512-e5f8f5a49a17" name="Default Changelist" comment="" />
+    <list default="true" id="2a471809-f355-4591-a512-e5f8f5a49a17" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Application/Application.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MyMoneyManagerBackend/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyMoneyManagerBackend/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MyMoneyManagerBackend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyMoneyManagerBackend/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Accounts/IAccountRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Repositories/IAccountRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Jars/IJarRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Repositories/IJarRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Transactions/ITransactionRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Repositories/ITransactionRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Users/IUserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Repositories/IUserRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/Infrastructure.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Infrastructure.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/SqlServer/Accounts/SqlServerAccountRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/SqlServer/Accounts/SqlServerAccountRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/SqlServer/Auth/SqlServerUserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/SqlServer/Auth/SqlServerUserRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/SqlServer/Jars/SqlServerJarRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/SqlServer/Jars/SqlServerJarRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/SqlServer/Transactions/SqlServerTransactionRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/SqlServer/Transactions/SqlServerTransactionRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyMoneyManagerBackend.sln" beforeDir="false" afterPath="$PROJECT_DIR$/MyMoneyManagerBackend.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAPI/Controllers/AuthController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Controllers/AuthController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAPI/WebAPI.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/WebAPI.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAPI/obj/Debug/netcoreapp3.1/WebAPI.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/obj/Debug/netcoreapp3.1/WebAPI.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAPI/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAPI/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAPI/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAPI/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/obj/rider.project.restore.info" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -63,15 +85,20 @@
         <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Accounts/AccountFactory.cs" />
         <option value="$PROJECT_DIR$/Domain/Accounts/IAccountRepository.cs" />
         <option value="$PROJECT_DIR$/Domain/Jars/IJarRepository.cs" />
-        <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Accounts/SqlServerAccountRepository.cs" />
         <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Jars/SqServerJarRepository.cs" />
-        <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Jars/SqlServerJarRepository.cs" />
         <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Jars/JarFactory.cs" />
         <option value="$PROJECT_DIR$/Domain/Transactions/ITransactionRepository.cs" />
         <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Transactions/TransactionFactory.cs" />
-        <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Transactions/SqlServerTransactionRepository.cs" />
-        <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Auth/SqlServerUserRepository.cs" />
         <option value="$PROJECT_DIR$/WebAPI/Controllers/AuthController.cs" />
+        <option value="$PROJECT_DIR$/Application/Class1.cs" />
+        <option value="$PROJECT_DIR$/Application/Repositories/IAccountRepository.cs" />
+        <option value="$PROJECT_DIR$/Application/Repositories/IJarRepository.cs" />
+        <option value="$PROJECT_DIR$/Application/Repositories/ITransactionRepository.cs" />
+        <option value="$PROJECT_DIR$/Application/Repositories/IUserRepository.cs" />
+        <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Accounts/SqlServerAccountRepository.cs" />
+        <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Auth/SqlServerUserRepository.cs" />
+        <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Jars/SqlServerJarRepository.cs" />
+        <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Transactions/SqlServerTransactionRepository.cs" />
       </list>
     </option>
   </component>
@@ -195,6 +222,7 @@
       <workItem from="1604068228100" duration="1844000" />
       <workItem from="1604763945742" duration="2227000" />
       <workItem from="1604857489018" duration="21196000" />
+      <workItem from="1604995956674" duration="2048000" />
     </task>
     <servers />
   </component>
@@ -240,9 +268,10 @@
     </state>
     <state width="1877" height="349" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1603719969197" />
     <state width="1877" height="349" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1604888909735" />
-    <state x="552" y="252" key="Rider.ProjectTemplateDialog.Size" timestamp="1603572886135">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="-1368" y="252" key="Rider.ProjectTemplateDialog.Size" timestamp="1604995994871">
+      <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
+    <state x="-1368" y="252" key="Rider.ProjectTemplateDialog.Size/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1604995994871" />
     <state x="552" y="252" key="Rider.ProjectTemplateDialog.Size/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603572886135" />
     <state x="1268" y="209" key="RiderGenerateDialog" timestamp="1604881662509">
       <screen x="0" y="0" width="1920" height="1040" />

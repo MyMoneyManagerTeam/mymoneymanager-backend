@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Net;
+using Application.Repositories;
 using Domain.Users;
 
 namespace Infrastructure.SqlServer.Auth
