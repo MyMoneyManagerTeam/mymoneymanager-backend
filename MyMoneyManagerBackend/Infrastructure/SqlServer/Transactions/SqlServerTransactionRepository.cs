@@ -1,16 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Net;
 using Application.Repositories;
 using Domain.Transactions;
 using Domain.Users;
-
+using Infrastructure.SqlServer.Factories;
+using TransactionFactory = Infrastructure.SqlServer.Factories.TransactionFactory;
 namespace Infrastructure.SqlServer.Transactions
 {
     public class SqlServerTransactionRepository: ITransactionRepository
     {
-        private ITransactionFactory _transactionFactory = new TransactionFactory();
+        private IInstanceFromReaderFactory<ITransaction> _transactionFactory = new TransactionFactory();
         public static readonly string TableName = "transactions";
         public static readonly string ColumnId = "transaction_id";
         public static readonly string ColumnEmitterId = "emitter_id";

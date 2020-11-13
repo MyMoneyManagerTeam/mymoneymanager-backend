@@ -1,7 +1,12 @@
 using System;
 using System.Collections.Generic;
+using System.IdentityModel.Tokens;
 using System.Linq;
 using System.Threading.Tasks;
+using Application.Repositories;
+using Application.Services.Users;
+using Infrastructure.SqlServer.Accounts;
+using Infrastructure.SqlServer.Auth;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -10,6 +15,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.IdentityModel.Tokens;
+using MyMoneyManagerBackend.Controllers;
 
 namespace MyMoneyManagerBackend
 {
@@ -26,6 +33,24 @@ namespace MyMoneyManagerBackend
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddAuthentication(options =>
+                {
+                    options.DefaultAuthenticateScheme = "JwtBearer";
+                    options.DefaultChallengeScheme = "JwtBearer";
+                })
+                .AddJwtBearer("JwtBearer", jwtOptions =>
+                {
+                    jwtOptions.TokenValidationParameters = new TokenValidationParameters()
+                    {
+                        IssuerSigningKey = AuthController.SIGNING_KEY,
+                        ValidateIssuer = false,
+                        ValidateAudience = false,
+                        ValidateIssuerSigningKey = true,
+                        ValidateLifetime = true,
+                        ClockSkew = TimeSpan.FromMinutes(5)
+                    };
+                });
+            
             services.AddCors(options => //ajout du CORS aux services
             {
                 options.AddPolicy(name: MyAllowSpecificOrigins,
@@ -37,6 +62,15 @@ namespace MyMoneyManagerBackend
                     });
             });
             services.AddControllers();
+            services.AddSingleton<IUserService, UserService>();
+            services.AddSingleton<IUserRepository, UserRepository>();
+            // services.AddSingleton<IAccountService, AccountService>();
+            // services.AddSingleton<IAccountRepository, AccountRepository>();
+            // services.AddSingleton<IJarService, JarService>();
+            // services.AddSingleton<IJarRepository, JarRepository>();
+            // services.AddSingleton<ITransactionService, TransactionService>();
+            // services.AddSingleton<ITransactionRepository, TransactionRepository>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -48,6 +82,8 @@ namespace MyMoneyManagerBackend
             }
 
             app.UseHttpsRedirection();
+
+            app.UseAuthentication();
 
             app.UseRouting();
 

@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using Domain.Accounts;
+using Domain.Users;
 
 namespace Application.Repositories
 {

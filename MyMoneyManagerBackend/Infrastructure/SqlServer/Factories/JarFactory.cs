@@ -1,9 +1,10 @@
 ﻿using System.Data.SqlClient;
 using Domain.Jars;
+using Infrastructure.SqlServer.Jars;
 
-namespace Infrastructure.SqlServer.Jars
+namespace Infrastructure.SqlServer.Factories
 {
-    public class JarFactory: IJarFactory
+    public class JarFactory: IInstanceFromReaderFactory<IJar>
     {
         public IJar CreateFromReader(SqlDataReader reader)
         {

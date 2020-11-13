@@ -1,9 +1,10 @@
 ﻿using System.Data.SqlClient;
 using Domain.Transactions;
+using Infrastructure.SqlServer.Transactions;
 
-namespace Infrastructure.SqlServer.Transactions
+namespace Infrastructure.SqlServer.Factories
 {
-    public class TransactionFactory: ITransactionFactory
+    public class TransactionFactory: IInstanceFromReaderFactory<ITransaction>
     {
         public ITransaction CreateFromReader(SqlDataReader reader)
         {

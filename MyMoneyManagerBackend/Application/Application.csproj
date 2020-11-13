@@ -9,7 +9,14 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Services" />
+      <Folder Include="Services\Accounts" />
+      <Folder Include="Services\Jars" />
+      <Folder Include="Services\Transactions" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.0.3" />
+      <PackageReference Include="System.Runtime.Serialization.Json" Version="4.3.0" />
     </ItemGroup>
 
 </Project>

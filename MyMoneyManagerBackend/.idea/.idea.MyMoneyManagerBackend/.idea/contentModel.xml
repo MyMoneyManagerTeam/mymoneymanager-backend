@@ -20,18 +20,37 @@
           <e p="ITransactionRepository.cs" t="Include" />
           <e p="IUserRepository.cs" t="Include" />
         </e>
-        <e p="Services" t="Include" />
+        <e p="Services" t="Include">
+          <e p="Accounts" t="Include" />
+          <e p="Jars" t="Include" />
+          <e p="Transactions" t="Include" />
+          <e p="Users" t="Include">
+            <e p="Dto" t="Include">
+              <e p="InputDtoAuth.cs" t="Include" />
+              <e p="InputDtoSignin.cs" t="Include" />
+              <e p="IOutputDtoAuthSign.cs" t="Include" />
+              <e p="OutputDtoAuth.cs" t="Include" />
+              <e p="OutputDtoSignin.cs" t="Include" />
+            </e>
+            <e p="IUserService.cs" t="Include" />
+            <e p="UserService.cs" t="Include" />
+          </e>
+        </e>
       </e>
       <e p="Domain" t="IncludeRecursive">
         <e p="Accounts" t="Include">
           <e p="Account.cs" t="Include" />
+          <e p="AccountFactory.cs" t="Include" />
           <e p="IAccount.cs" t="Include" />
+          <e p="IAccountFactory.cs" t="Include" />
         </e>
         <e p="bin" t="ExcludeRecursive" />
         <e p="Domain.csproj" t="IncludeRecursive" />
         <e p="Jars" t="Include">
           <e p="IJar.cs" t="Include" />
+          <e p="IJarFactory.cs" t="Include" />
           <e p="Jar.cs" t="Include" />
+          <e p="JarFactory.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
@@ -45,11 +64,15 @@
         </e>
         <e p="Transactions" t="Include">
           <e p="ITransaction.cs" t="Include" />
+          <e p="ITransactionFactory.cs" t="Include" />
           <e p="Transaction.cs" t="Include" />
+          <e p="TransactionFactory.cs" t="Include" />
         </e>
         <e p="Users" t="Include">
           <e p="IUser.cs" t="Include" />
+          <e p="IUserFactory.cs" t="Include" />
           <e p="User.cs" t="Include" />
+          <e p="UserFactory.cs" t="Include" />
         </e>
       </e>
       <e p="Infrastructure" t="IncludeRecursive">
@@ -64,25 +87,24 @@
         </e>
         <e p="SqlServer" t="Include">
           <e p="Accounts" t="Include">
-            <e p="AccountFactory.cs" t="Include" />
-            <e p="IAccountFactory.cs" t="Include" />
-            <e p="SqlServerAccountRepository.cs" t="Include" />
+            <e p="AccountRepository.cs" t="Include" />
           </e>
           <e p="Auth" t="Include">
-            <e p="IUserFactory.cs" t="Include" />
-            <e p="SqlServerUserRepository.cs" t="Include" />
-            <e p="UserFactory.cs" t="Include" />
+            <e p="UserRepository.cs" t="Include" />
           </e>
           <e p="Database.cs" t="Include" />
-          <e p="Jars" t="Include">
-            <e p="IJarFactory.cs" t="Include" />
+          <e p="Factories" t="Include">
+            <e p="AccountFactory.cs" t="Include" />
+            <e p="IInstanceFromReaderFactory.cs" t="Include" />
             <e p="JarFactory.cs" t="Include" />
+            <e p="TransactionFactory.cs" t="Include" />
+            <e p="UserFactory.cs" t="Include" />
+          </e>
+          <e p="Jars" t="Include">
             <e p="SqlServerJarRepository.cs" t="Include" />
           </e>
           <e p="Transactions" t="Include">
-            <e p="ITransactionFactory.cs" t="Include" />
             <e p="SqlServerTransactionRepository.cs" t="Include" />
-            <e p="TransactionFactory.cs" t="Include" />
           </e>
         </e>
       </e>
@@ -94,9 +116,6 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="Controllers" t="Include">
           <e p="AuthController.cs" t="Include" />
-          <e p="Requests" t="Include">
-            <e p="SigninRequest.cs" t="Include" />
-          </e>
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">

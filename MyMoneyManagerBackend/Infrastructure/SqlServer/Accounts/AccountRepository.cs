@@ -2,13 +2,17 @@
 using System.Collections.Generic;
 using System.Data;
 using Application.Repositories;
+using Domain.Accounts;
+using Domain.Users;
+using Infrastructure.SqlServer.Factories;
+using AccountFactory = Infrastructure.SqlServer.Factories.AccountFactory;
 
 
 namespace Infrastructure.SqlServer.Accounts
 {
-    public class SqlServerAccountRepository: IAccountRepository
+    public class AccountRepository: IAccountRepository
     {
-        private IAccountFactory _accountFactory = new AccountFactory();
+        private IInstanceFromReaderFactory<IAccount> _accountFactory = new AccountFactory();
         public static readonly string TableName = "accounts";
         public static readonly string ColumnId = "account_id";
         public static readonly string ColumnBalance = "balance";

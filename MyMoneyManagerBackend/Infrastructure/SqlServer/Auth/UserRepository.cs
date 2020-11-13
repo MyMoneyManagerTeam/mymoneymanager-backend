@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Net;
 using Application.Repositories;
 using Domain.Users;
+using Infrastructure.SqlServer.Factories;
+using UserFactory = Infrastructure.SqlServer.Factories.UserFactory;
 
 namespace Infrastructure.SqlServer.Auth
 {
-    public class SqlServerUserRepository : IUserRepository
+    public class UserRepository : IUserRepository
     {
         public static readonly string TableName = "users";
         public static readonly string ColumnId = "user_id";
@@ -32,7 +32,7 @@ namespace Infrastructure.SqlServer.Auth
             OUTPUT INSERTED.{ColumnId}            
             VALUES (NEWID(),@{ColumnMail},@{ColumnPassword},@{ColumnFirstName},@{ColumnLastName},@{ColumnCountry},@{ColumnArea},@{ColumnAddress},@{ColumnZipCode},@{ColumnCity},NULL,1,0);
         ";
-        private IUserFactory _userFactory = new UserFactory();
+        private IInstanceFromReaderFactory<IUser> _userFactory = new UserFactory();
         
         public IEnumerable<IUser> Query()
         {
@@ -81,14 +81,12 @@ namespace Infrastructure.SqlServer.Auth
                 try
                 {
                     user.Id = (Guid) command.ExecuteScalar();
-
                 }
                 catch (SqlException ex)
                 {
                     return null;
                 }
             }
-
             return user;
         }
 

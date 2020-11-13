@@ -1,16 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Linq;
 using Application.Repositories;
 using Domain.Jars;
 using Domain.Users;
+using Infrastructure.SqlServer.Factories;
+using JarFactory = Infrastructure.SqlServer.Factories.JarFactory;
 
 namespace Infrastructure.SqlServer.Jars
 {
     public class SqlServerJarRepository: IJarRepository
     {
-        private IJarFactory _jarFactory = new JarFactory();
+        private IInstanceFromReaderFactory<IJar> _jarFactory = new JarFactory();
         public static readonly string TableName = "jars";
         public static readonly string ColumnId = "jar_id";
         public static readonly string ColumnOwner = "owner";

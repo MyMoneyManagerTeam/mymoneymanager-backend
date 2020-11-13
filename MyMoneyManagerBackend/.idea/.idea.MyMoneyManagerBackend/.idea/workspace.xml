@@ -25,21 +25,44 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2a471809-f355-4591-a512-e5f8f5a49a17" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Application/Application.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/Services/Users/Dto/IOutputDtoAuthSign.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/Services/Users/Dto/InputDtoAuth.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/Services/Users/Dto/OutputDtoAuth.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/Services/Users/Dto/OutputDtoSignin.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/Services/Users/IUserService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/Services/Users/UserService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Infrastructure/SqlServer/Factories/AccountFactory.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Infrastructure/SqlServer/Factories/IInstanceFromReaderFactory.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Infrastructure/SqlServer/Factories/JarFactory.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Infrastructure/SqlServer/Factories/TransactionFactory.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Infrastructure/SqlServer/Factories/UserFactory.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MyMoneyManagerBackend/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyMoneyManagerBackend/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MyMoneyManagerBackend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyMoneyManagerBackend/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Accounts/IAccountRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Repositories/IAccountRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Jars/IJarRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Repositories/IJarRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Transactions/ITransactionRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Repositories/ITransactionRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Users/IUserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Repositories/IUserRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/Application.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Application.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/Repositories/IAccountRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Repositories/IAccountRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/Repositories/IJarRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Repositories/IJarRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/Repositories/ITransactionRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Repositories/ITransactionRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/Repositories/IUserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Repositories/IUserRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Domain.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Domain.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/obj/project.packagespec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Infrastructure/Infrastructure.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Infrastructure.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Infrastructure/SqlServer/Accounts/SqlServerAccountRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/SqlServer/Accounts/SqlServerAccountRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Infrastructure/SqlServer/Auth/SqlServerUserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/SqlServer/Auth/SqlServerUserRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/SqlServer/Accounts/AccountFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Accounts/AccountFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/SqlServer/Accounts/IAccountFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Accounts/IAccountFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/SqlServer/Accounts/SqlServerAccountRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/SqlServer/Accounts/AccountRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/SqlServer/Auth/IUserFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Users/IUserFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/SqlServer/Auth/SqlServerUserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/SqlServer/Auth/UserRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/SqlServer/Auth/UserFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Users/UserFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/SqlServer/Jars/IJarFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Jars/IJarFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/SqlServer/Jars/JarFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Jars/JarFactory.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Infrastructure/SqlServer/Jars/SqlServerJarRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/SqlServer/Jars/SqlServerJarRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/SqlServer/Transactions/ITransactionFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Transactions/ITransactionFactory.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Infrastructure/SqlServer/Transactions/SqlServerTransactionRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/SqlServer/Transactions/SqlServerTransactionRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/SqlServer/Transactions/TransactionFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Transactions/TransactionFactory.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Infrastructure/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyMoneyManagerBackend.sln" beforeDir="false" afterPath="$PROJECT_DIR$/MyMoneyManagerBackend.sln" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebAPI/Controllers/AuthController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Controllers/AuthController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAPI/Controllers/Requests/SigninRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Services/Users/Dto/InputDtoSignin.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAPI/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAPI/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Startup.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebAPI/WebAPI.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/WebAPI.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebAPI/obj/Debug/netcoreapp3.1/WebAPI.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/obj/Debug/netcoreapp3.1/WebAPI.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebAPI/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/obj/project.assets.json" afterDir="false" />
@@ -61,23 +84,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/WebAPI/Properties/launchSettings.json" />
-        <option value="$PROJECT_DIR$/Domain/Class1.cs" />
-        <option value="$PROJECT_DIR$/Infrastructure/Class1.cs" />
-        <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Database.cs" />
-        <option value="$PROJECT_DIR$/Domain/Users/IUserRepository.cs" />
-        <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Auth/IUserFactory.cs" />
-        <option value="$PROJECT_DIR$/WebAPI/Startup.cs" />
-        <option value="$PROJECT_DIR$/WebAPI/Controllers/Requests/SigninRequest.cs" />
-        <option value="$PROJECT_DIR$/Domain/Shared/IEntity.cs" />
-        <option value="$PROJECT_DIR$/Domain/Accounts/IAccount.cs" />
-        <option value="$PROJECT_DIR$/Domain/Jars/IJar.cs" />
-        <option value="$PROJECT_DIR$/Domain/Transactions/ITransaction.cs" />
-        <option value="$PROJECT_DIR$/Domain/Transactions/Transaction.cs" />
-        <option value="$PROJECT_DIR$/Domain/Jars/Jar.cs" />
-        <option value="$PROJECT_DIR$/Domain/Accounts/Account.cs" />
-        <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Auth/UserFactory.cs" />
-        <option value="$PROJECT_DIR$/Domain/Users/User.cs" />
         <option value="$PROJECT_DIR$/Domain/Users/IUser.cs" />
         <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Accounts/IAccountFactory.cs" />
         <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Jars/IJarFactory.cs" />
@@ -89,16 +95,46 @@
         <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Jars/JarFactory.cs" />
         <option value="$PROJECT_DIR$/Domain/Transactions/ITransactionRepository.cs" />
         <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Transactions/TransactionFactory.cs" />
-        <option value="$PROJECT_DIR$/WebAPI/Controllers/AuthController.cs" />
         <option value="$PROJECT_DIR$/Application/Class1.cs" />
-        <option value="$PROJECT_DIR$/Application/Repositories/IAccountRepository.cs" />
-        <option value="$PROJECT_DIR$/Application/Repositories/IJarRepository.cs" />
-        <option value="$PROJECT_DIR$/Application/Repositories/ITransactionRepository.cs" />
-        <option value="$PROJECT_DIR$/Application/Repositories/IUserRepository.cs" />
         <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Accounts/SqlServerAccountRepository.cs" />
+        <option value="$PROJECT_DIR$/Application/Services/Users/Dto/InputDtoLogin.cs" />
+        <option value="$PROJECT_DIR$/Application/Services/Users/Dto/OutputDtoLogin.cs" />
+        <option value="$PROJECT_DIR$/Application/Services/Users/Dto/InputDtoSignin.cs" />
+        <option value="$PROJECT_DIR$/Application/Services/Users/Dto/InputDtoAuth.cs" />
+        <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Factories/IInstanceFromReaderFactory.cs" />
+        <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Factories/JarFactory.cs" />
+        <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Factories/TransactionFactory.cs" />
+        <option value="$PROJECT_DIR$/Application/Repositories/IUserRepository.cs" />
+        <option value="$PROJECT_DIR$/Application/Repositories/ITransactionRepository.cs" />
+        <option value="$PROJECT_DIR$/Application/Repositories/IJarRepository.cs" />
+        <option value="$PROJECT_DIR$/Application/Repositories/IAccountRepository.cs" />
+        <option value="$PROJECT_DIR$/Application/Services/Users/IUserService.cs" />
         <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Auth/SqlServerUserRepository.cs" />
+        <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Factories/AccountFactory.cs" />
+        <option value="$PROJECT_DIR$/Domain/Accounts/IAccountFactory.cs" />
+        <option value="$PROJECT_DIR$/Domain/Accounts/AccountFactory.cs" />
+        <option value="$PROJECT_DIR$/Domain/Jars/JarFactory.cs" />
+        <option value="$PROJECT_DIR$/Domain/Jars/IJarFactory.cs" />
+        <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Accounts/AccountRepository.cs" />
         <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Jars/SqlServerJarRepository.cs" />
         <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Transactions/SqlServerTransactionRepository.cs" />
+        <option value="$PROJECT_DIR$/Domain/Transactions/ITransactionFactory.cs" />
+        <option value="$PROJECT_DIR$/Domain/Transactions/TransactionFactory.cs" />
+        <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Auth/UserRepository.cs" />
+        <option value="$PROJECT_DIR$/Domain/Users/IUserFactory.cs" />
+        <option value="$PROJECT_DIR$/Domain/Users/UserFactory.cs" />
+        <option value="$PROJECT_DIR$/WebAPI/Managers/IAuthService.cs" />
+        <option value="$PROJECT_DIR$/WebAPI/Models/IAuthContainerModel.cs" />
+        <option value="$PROJECT_DIR$/WebAPI/Managers/JWTService.cs" />
+        <option value="$PROJECT_DIR$/WebAPI/Models/JWTContainerModel.cs" />
+        <option value="$PROJECT_DIR$/WebAPI/Program.cs" />
+        <option value="$PROJECT_DIR$/WebAPI/Startup.cs" />
+        <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Factories/UserFactory.cs" />
+        <option value="$PROJECT_DIR$/Application/Services/Users/Dto/IOutputDtoAuthSign.cs" />
+        <option value="$PROJECT_DIR$/Application/Services/Users/Dto/OutputDtoAuth.cs" />
+        <option value="$PROJECT_DIR$/Application/Services/Users/Dto/OutputDtoSignin.cs" />
+        <option value="$PROJECT_DIR$/WebAPI/Controllers/AuthController.cs" />
+        <option value="$PROJECT_DIR$/Application/Services/Users/UserService.cs" />
       </list>
     </option>
   </component>
@@ -114,6 +150,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected=".NET Launch Settings Profile.MyMoneyManagerBackend">
@@ -207,6 +244,26 @@
         <option name="Build" />
       </method>
     </configuration>
+    <configuration name="WebAPI: IIS Express" type="LaunchSettings" factoryName=".NET Launch Settings Profile" temporary="true">
+      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/WebAPI/WebAPI.csproj" />
+      <option name="LAUNCH_PROFILE_TFM" value=".NETCoreApp,Version=v3.1" />
+      <option name="LAUNCH_PROFILE_NAME" value="IIS Express" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="GENERATE_APPLICATIONHOST_CONFIG" value="1" />
+      <option name="SHOW_IIS_EXPRESS_OUTPUT" value="0" />
+      <option name="SEND_DEBUG_REQUEST" value="1" />
+      <option name="ADDITIONAL_IIS_EXPRESS_ARGUMENTS" value="" />
+      <method v="2">
+        <option name="Build" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue=".NET Launch Settings Profile.WebAPI: IIS Express" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -222,7 +279,9 @@
       <workItem from="1604068228100" duration="1844000" />
       <workItem from="1604763945742" duration="2227000" />
       <workItem from="1604857489018" duration="21196000" />
-      <workItem from="1604995956674" duration="2048000" />
+      <workItem from="1604995956674" duration="3237000" />
+      <workItem from="1605196053012" duration="18040000" />
+      <workItem from="1605223347709" duration="6447000" />
     </task>
     <servers />
   </component>
@@ -248,43 +307,51 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1877" height="349" key="GridCell.Tab.0.bottom" timestamp="1604888909735">
+    <state width="1877" height="349" key="GridCell.Tab.0.bottom" timestamp="1605229183402">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="349" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1603719969197" />
-    <state width="1877" height="349" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1604888909735" />
-    <state width="1877" height="349" key="GridCell.Tab.0.center" timestamp="1604888909735">
+    <state width="1877" height="349" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1605229183402" />
+    <state width="1877" height="349" key="GridCell.Tab.0.center" timestamp="1605229183402">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="349" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1603719969197" />
-    <state width="1877" height="349" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1604888909735" />
-    <state width="1877" height="349" key="GridCell.Tab.0.left" timestamp="1604888909735">
+    <state width="1877" height="349" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1605229183402" />
+    <state width="1877" height="349" key="GridCell.Tab.0.left" timestamp="1605229183402">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="349" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1603719969197" />
-    <state width="1877" height="349" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1604888909735" />
-    <state width="1877" height="349" key="GridCell.Tab.0.right" timestamp="1604888909735">
+    <state width="1877" height="349" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1605229183402" />
+    <state width="1877" height="349" key="GridCell.Tab.0.right" timestamp="1605229183402">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="349" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1603719969197" />
-    <state width="1877" height="349" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1604888909735" />
+    <state width="1877" height="349" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1605229183402" />
     <state x="-1368" y="252" key="Rider.ProjectTemplateDialog.Size" timestamp="1604995994871">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1368" y="252" key="Rider.ProjectTemplateDialog.Size/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1604995994871" />
     <state x="552" y="252" key="Rider.ProjectTemplateDialog.Size/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603572886135" />
-    <state x="1268" y="209" key="RiderGenerateDialog" timestamp="1604881662509">
+    <state x="1268" y="209" key="RiderGenerateDialog" timestamp="1605215706768">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1268" y="209" key="RiderGenerateDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1604881662509" />
+    <state x="1268" y="209" key="RiderGenerateDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1605215706768" />
+    <state x="461" y="165" key="SettingsEditor" timestamp="1605203313902">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="165" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1605203313902" />
     <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog" timestamp="1604873141060">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1604873141060" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1604880826468">
+    <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605203817663">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1605203817663" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1605216651783">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1297" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1603584775437" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1604880826468" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1605216651783" />
   </component>
 </project>
