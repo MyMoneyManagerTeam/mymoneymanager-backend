@@ -13,12 +13,6 @@ namespace Infrastructure.SqlServer.Accounts
     public class AccountRepository: IAccountRepository
     {
         private IInstanceFromReaderFactory<IAccount> _accountFactory = new AccountFactory();
-        public static readonly string TableName = "accounts";
-        public static readonly string ColumnId = "account_id";
-        public static readonly string ColumnBalance = "balance";
-        public static readonly string ReqGet = $@"SELECT * FROM {TableName} WHERE {ColumnId}=@{ColumnId}";
-        public static readonly string ReqCreate = $@"INSERT INTO {TableName} ({ColumnId},{ColumnBalance}) VALUES (@{ColumnId},@{ColumnBalance})";
-        private double _defaultBalance = 500;
 
         public IEnumerable<IAccount> Query()
         {
@@ -32,8 +26,8 @@ namespace Infrastructure.SqlServer.Accounts
             {
                 connection.Open();
                 var command = connection.CreateCommand();
-                command.CommandText = ReqGet;
-                command.Parameters.AddWithValue($"@{ColumnId}", id);
+                command.CommandText = AccountSqlServer.ReqGet;
+                command.Parameters.AddWithValue($"@{AccountSqlServer.ColumnId}", id);
                 var reader = command.ExecuteReader(CommandBehavior.CloseConnection);
                 while (reader.Read())
                 {
@@ -43,21 +37,22 @@ namespace Infrastructure.SqlServer.Accounts
             return res;
         }
 
-        public IAccount Create(IUser user)
+        public IAccount Create(Guid userId)
         {
             IAccount res = null;
             using (var connection = Database.GetConnection())
             {
                 connection.Open();
                 var command = connection.CreateCommand();
-                command.CommandText = ReqCreate;
-                command.Parameters.AddWithValue($"@{ColumnId}", user.Id);
-                command.Parameters.AddWithValue($"@{ColumnId}", _defaultBalance);
+
+                command.CommandText = AccountSqlServer.ReqCreate;
+                command.Parameters.AddWithValue($"@{AccountSqlServer.ColumnId}", userId);
+                command.Parameters.AddWithValue($"@{AccountSqlServer.ColumnBalance}", AccountSqlServer._defaultBalance);
                 command.ExecuteNonQuery();
                 res = new Account()
                 {
-                    Id = user.Id,
-                    Balance = _defaultBalance
+                    Id = userId,
+                    Balance = AccountSqlServer._defaultBalance
                 };
             }
             return res;

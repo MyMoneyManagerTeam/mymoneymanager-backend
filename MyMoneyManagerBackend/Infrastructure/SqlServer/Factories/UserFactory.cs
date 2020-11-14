@@ -13,7 +13,7 @@ namespace Infrastructure.SqlServer.Factories
             byte[] img = null;
             try
             {
-                Stream stream = reader.GetStream(reader.GetOrdinal(UserRepository.ColumnPicture));
+                Stream stream = reader.GetStream(reader.GetOrdinal(UserSqlServer.ColumnPicture));
                 BinaryReader br = new BinaryReader(stream);
                 img = br.ReadBytes((int) stream.Length);
             }
@@ -23,20 +23,19 @@ namespace Infrastructure.SqlServer.Factories
             }
             return new User()
             {
-                Id = reader.GetGuid(reader.GetOrdinal(UserRepository.ColumnId)),
-                Mail = reader.GetString(reader.GetOrdinal(UserRepository.ColumnMail)),
-                FirstName = reader.GetString(reader.GetOrdinal(UserRepository.ColumnFirstName)),
-                Password = reader.GetString(reader.GetOrdinal(UserRepository.ColumnPassword)),
-                LastName = reader.GetString(reader.GetOrdinal(UserRepository.ColumnLastName)),
-                Address = reader.GetString(reader.GetOrdinal(UserRepository.ColumnAddress)),
-                Admin = reader.GetBoolean(reader.GetOrdinal(UserRepository.ColumnAdmin)),
+                Id = reader.GetGuid(reader.GetOrdinal(UserSqlServer.ColumnId)),
+                Mail = reader.GetString(reader.GetOrdinal(UserSqlServer.ColumnMail)),
+                FirstName = reader.GetString(reader.GetOrdinal(UserSqlServer.ColumnFirstName)),
+                Password = reader.GetString(reader.GetOrdinal(UserSqlServer.ColumnPassword)),
+                LastName = reader.GetString(reader.GetOrdinal(UserSqlServer.ColumnLastName)),
+                Address = reader.GetString(reader.GetOrdinal(UserSqlServer.ColumnAddress)),
+                Admin = reader.GetBoolean(reader.GetOrdinal(UserSqlServer.ColumnAdmin)),
                 Picture = img,
-                Token = "fake-token", // FAKE TOKEN POUR L'INSTANT AVANT D'EN GEN UN VRAI
-                Area = reader.GetString(reader.GetOrdinal(UserRepository.ColumnArea)),
-                City = reader.GetString(reader.GetOrdinal(UserRepository.ColumnCity)),
-                Confirmed = reader.GetBoolean(reader.GetOrdinal(UserRepository.ColumnConfirmed)),
-                Country = reader.GetString(reader.GetOrdinal(UserRepository.ColumnCountry)),
-                Zip = reader.GetInt32(reader.GetOrdinal(UserRepository.ColumnZipCode))
+                Area = reader.GetString(reader.GetOrdinal(UserSqlServer.ColumnArea)),
+                City = reader.GetString(reader.GetOrdinal(UserSqlServer.ColumnCity)),
+                Confirmed = reader.GetBoolean(reader.GetOrdinal(UserSqlServer.ColumnConfirmed)),
+                Country = reader.GetString(reader.GetOrdinal(UserSqlServer.ColumnCountry)),
+                Zip = reader.GetInt32(reader.GetOrdinal(UserSqlServer.ColumnZipCode))
             };
         }
     }

@@ -10,8 +10,8 @@ namespace Infrastructure.SqlServer.Factories
         {
             return new Account()
             {
-                Id = reader.GetGuid(reader.GetOrdinal(AccountRepository.ColumnId)),
-                Balance = reader.GetDouble(reader.GetOrdinal(AccountRepository.ColumnBalance))
+                Id = reader.GetGuid(reader.GetOrdinal(AccountSqlServer.ColumnId)),
+                Balance = reader.GetDouble(reader.GetOrdinal(AccountSqlServer.ColumnBalance))
             };
         }
     }

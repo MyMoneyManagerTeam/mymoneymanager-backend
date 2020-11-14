@@ -10,12 +10,12 @@ namespace Infrastructure.SqlServer.Factories
         {
             return new Jar()
             {
-                Id = reader.GetGuid(reader.GetOrdinal(SqlServerJarRepository.ColumnId)),
-                Owner = reader.GetGuid(reader.GetOrdinal(SqlServerJarRepository.ColumnOwner)),
-                Description = reader.GetString(reader.GetOrdinal(SqlServerJarRepository.ColumnDescription)),
-                Name = reader.GetString(reader.GetOrdinal(SqlServerJarRepository.ColumnName)),
-                Max = reader.GetDouble(reader.GetOrdinal(SqlServerJarRepository.ColumnMax)),
-                Balance =  reader.GetDouble(reader.GetOrdinal(SqlServerJarRepository.ColumnBalance))
+                Id = reader.GetGuid(reader.GetOrdinal(JarSqlServer.ColumnId)),
+                Owner = reader.GetGuid(reader.GetOrdinal(JarSqlServer.ColumnOwner)),
+                Description = reader.GetString(reader.GetOrdinal(JarSqlServer.ColumnDescription)),
+                Name = reader.GetString(reader.GetOrdinal(JarSqlServer.ColumnName)),
+                Max = reader.GetDouble(reader.GetOrdinal(JarSqlServer.ColumnMax)),
+                Balance =  reader.GetDouble(reader.GetOrdinal(JarSqlServer.ColumnBalance))
             };
         }
     }

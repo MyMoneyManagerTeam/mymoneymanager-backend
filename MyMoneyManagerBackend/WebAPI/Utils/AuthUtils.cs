@@ -7,7 +7,7 @@ using Microsoft.IdentityModel.Tokens;
 
 namespace MyMoneyManagerBackend.Utils
 {
-    public class AuthUtils
+    public static class AuthUtils
     {
         #region Token Region
         

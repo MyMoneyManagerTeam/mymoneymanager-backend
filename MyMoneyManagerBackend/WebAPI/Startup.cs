@@ -4,6 +4,7 @@ using System.IdentityModel.Tokens;
 using System.Linq;
 using System.Threading.Tasks;
 using Application.Repositories;
+using Application.Services.Accounts;
 using Application.Services.Users;
 using Infrastructure.SqlServer.Accounts;
 using Infrastructure.SqlServer.Auth;
@@ -65,8 +66,8 @@ namespace MyMoneyManagerBackend
             services.AddControllers();
             services.AddSingleton<IUserService, UserService>();
             services.AddSingleton<IUserRepository, UserRepository>();
-            // services.AddSingleton<IAccountService, AccountService>();
-            // services.AddSingleton<IAccountRepository, AccountRepository>();
+            services.AddSingleton<IAccountService, AccountService>();
+            services.AddSingleton<IAccountRepository, AccountRepository>();
             // services.AddSingleton<IJarService, JarService>();
             // services.AddSingleton<IJarRepository, JarRepository>();
             // services.AddSingleton<ITransactionService, TransactionService>();

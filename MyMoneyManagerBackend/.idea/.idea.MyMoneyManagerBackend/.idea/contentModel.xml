@@ -21,7 +21,15 @@
           <e p="IUserRepository.cs" t="Include" />
         </e>
         <e p="Services" t="Include">
-          <e p="Accounts" t="Include" />
+          <e p="Accounts" t="Include">
+            <e p="AccountService.cs" t="Include" />
+            <e p="Dto" t="Include">
+              <e p="InputDtoUpdateAccount.cs" t="Include" />
+              <e p="OutputDtoCreateAccount.cs" t="Include" />
+              <e p="OutputDtoGetAccount.cs" t="Include" />
+            </e>
+            <e p="IAccountService.cs" t="Include" />
+          </e>
           <e p="Jars" t="Include" />
           <e p="Transactions" t="Include" />
           <e p="Users" t="Include">
@@ -88,9 +96,11 @@
         <e p="SqlServer" t="Include">
           <e p="Accounts" t="Include">
             <e p="AccountRepository.cs" t="Include" />
+            <e p="AccountSqlServer.cs" t="Include" />
           </e>
           <e p="Auth" t="Include">
             <e p="UserRepository.cs" t="Include" />
+            <e p="UserSqlServer.cs" t="Include" />
           </e>
           <e p="Database.cs" t="Include" />
           <e p="Factories" t="Include">
@@ -101,10 +111,12 @@
             <e p="UserFactory.cs" t="Include" />
           </e>
           <e p="Jars" t="Include">
-            <e p="SqlServerJarRepository.cs" t="Include" />
+            <e p="JarRepository.cs" t="Include" />
+            <e p="JarSqlServer.cs" t="Include" />
           </e>
           <e p="Transactions" t="Include">
-            <e p="SqlServerTransactionRepository.cs" t="Include" />
+            <e p="TransactionRepository.cs" t="Include" />
+            <e p="TransactionSqlServer.cs" t="Include" />
           </e>
         </e>
       </e>
@@ -115,6 +127,7 @@
         <e p="appsettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="Controllers" t="Include">
+          <e p="AccountController.cs" t="Include" />
           <e p="AuthController.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">

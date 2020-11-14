@@ -24,7 +24,7 @@ namespace MyMoneyManagerBackend.Controllers
         [HttpPost]
         [Route("[action]")]
         //Action pour une requête de connexion. Si les infos sont correctes, on retourne les infos de l'utilisateur
-        public ActionResult<IUser> Authenticate([FromBody] InputDtoAuth req)
+        public ActionResult<OutputDtoAuth> Authenticate([FromBody] InputDtoAuth req)
         {
             // On demande au UserService si les infos de connexion sont correctes. Retourne null si non.
             var response = _userService.Authenticate(req);
@@ -76,6 +76,7 @@ namespace MyMoneyManagerBackend.Controllers
         {
             return Ok(new {message = "Votre JWT a bien été validé," +
                                      $" vous êtes {User.FindFirst(ClaimTypes.Name)?.Value} et votre id" +
-                                     $" est {User.FindFirst(ClaimTypes.NameIdentifier)?.Value}"});        }
+                                     $" est {User.FindFirst(ClaimTypes.NameIdentifier)?.Value}"});
+        }
     }
 }

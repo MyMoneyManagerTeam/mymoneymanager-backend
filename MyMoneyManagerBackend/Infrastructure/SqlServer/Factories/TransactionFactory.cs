@@ -10,14 +10,14 @@ namespace Infrastructure.SqlServer.Factories
         {
             return new Transaction()
             {
-                Id = reader.GetGuid(reader.GetOrdinal(SqlServerTransactionRepository.ColumnId)),
-                EmitterId = reader.GetGuid(reader.GetOrdinal(SqlServerTransactionRepository.ColumnEmitterId)),
-                ReceiverId = reader.GetGuid(reader.GetOrdinal(SqlServerTransactionRepository.ColumnReceiverId)),
-                Amount = reader.GetDouble(reader.GetOrdinal(SqlServerTransactionRepository.ColumnAmount)),
-                TransactionDate = reader.GetDateTime(reader.GetOrdinal(SqlServerTransactionRepository.ColumnTransactionDate)),
-                Description = reader.GetString(reader.GetOrdinal(SqlServerTransactionRepository.ColumnDescription)),
-                EmitterName = reader.GetString(reader.GetOrdinal(SqlServerTransactionRepository.ColumnEmitterName)),
-                ReceiverName = reader.GetString(reader.GetOrdinal(SqlServerTransactionRepository.ColumnReceiverName))
+                Id = reader.GetGuid(reader.GetOrdinal(TransactionSqlServer.ColumnId)),
+                EmitterId = reader.GetGuid(reader.GetOrdinal(TransactionSqlServer.ColumnEmitterId)),
+                ReceiverId = reader.GetGuid(reader.GetOrdinal(TransactionSqlServer.ColumnReceiverId)),
+                Amount = reader.GetDouble(reader.GetOrdinal(TransactionSqlServer.ColumnAmount)),
+                TransactionDate = reader.GetDateTime(reader.GetOrdinal(TransactionSqlServer.ColumnTransactionDate)),
+                Description = reader.GetString(reader.GetOrdinal(TransactionSqlServer.ColumnDescription)),
+                EmitterName = reader.GetString(reader.GetOrdinal(TransactionSqlServer.ColumnEmitterName)),
+                ReceiverName = reader.GetString(reader.GetOrdinal(TransactionSqlServer.ColumnReceiverName))
             };
         }
     }

@@ -9,7 +9,7 @@ namespace Application.Repositories
     {
         IEnumerable<IAccount> Query();
         IAccount Get(Guid id);
-        IAccount Create(IUser user);
+        IAccount Create(Guid userId);
         bool Update(Guid id, IAccount account);
         bool Delete(Guid id);
     }

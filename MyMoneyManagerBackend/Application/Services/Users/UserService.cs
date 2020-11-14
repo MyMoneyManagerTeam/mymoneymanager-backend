@@ -1,5 +1,6 @@
 ﻿using System;
 using Application.Repositories;
+using Application.Services.Accounts;
 using Application.Services.Users.Dto;
 using Domain.Users;
 
@@ -46,7 +47,6 @@ namespace Application.Services.Users
             var userInDb = _userRepository.Create(userFromDto);
             if (userInDb == null)
                 return null;
-            
             return new OutputDtoSignin
             {
                 Id = userInDb.Id,
@@ -61,7 +61,6 @@ namespace Application.Services.Users
                 Zip = userInDb.Zip,
                 FirstName = userInDb.FirstName,
                 LastName = userInDb.LastName,
-                Token = "TOKENHERE"
             };
         }
     }
