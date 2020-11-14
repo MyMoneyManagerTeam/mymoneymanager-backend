@@ -129,6 +129,9 @@
           <e p="launchSettings.json" t="Include" />
         </e>
         <e p="Startup.cs" t="Include" />
+        <e p="Utils" t="Include">
+          <e p="AuthUtils.cs" t="Include" />
+        </e>
         <e p="WebAPI.csproj" t="IncludeRecursive" />
       </e>
     </e>

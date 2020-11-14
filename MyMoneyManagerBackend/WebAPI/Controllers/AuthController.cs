@@ -1,44 +1,20 @@
-﻿using System;
-using System.IdentityModel.Tokens.Jwt;
-using System.Net.Http;
-using System.Security.Claims;
-using System.Text;
-using Application.Repositories;
+﻿using System.Security.Claims;
 using Application.Services.Users;
 using Application.Services.Users.Dto;
 using Domain.Users;
-using Infrastructure.SqlServer.Auth;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.IdentityModel.Tokens;
+using MyMoneyManagerBackend.Utils;
 
+/*
+ * ATTENTION RESTE A AJOUTER UNE FONCTION DE HASH POUR LE MDP.
+ */
 namespace MyMoneyManagerBackend.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
     public class AuthController : ControllerBase
     {
-        #region Token Region
-        public string GenerateToken(IOutputDtoAuthSign user)
-        {
-            var token = new JwtSecurityToken(
-                claims:    new Claim[] { 
-                    new Claim(ClaimTypes.NameIdentifier,user.Id.ToString()),
-                    new Claim(ClaimTypes.Email, user.Mail),
-                    new Claim(ClaimTypes.Name, user.FirstName + " " + user.LastName),
-                    new Claim(ClaimTypes.Role, user.Admin?"admin":"lambda"),
-                },
-                notBefore: new DateTimeOffset(DateTime.Now).DateTime,
-                expires:   new DateTimeOffset(DateTime.Now.AddMinutes(10080)).DateTime,
-                signingCredentials: new SigningCredentials(SIGNING_KEY,
-                    SecurityAlgorithms.HmacSha256)
-            );
-
-            return new JwtSecurityTokenHandler().WriteToken(token);
-        }
-        private const string SECRET_KEY = "eUepR6WS9t7J9IgZUa5OPNQbxYzfn9mk6YoEkkp5Es4=";
-        public static readonly SymmetricSecurityKey SIGNING_KEY = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(SECRET_KEY));
-        #endregion
         private readonly IUserService _userService;
 
         public AuthController(IUserService userService)
@@ -47,8 +23,10 @@ namespace MyMoneyManagerBackend.Controllers
         }
         [HttpPost]
         [Route("[action]")]
+        //Action pour une requête de connexion. Si les infos sont correctes, on retourne les infos de l'utilisateur
         public ActionResult<IUser> Authenticate([FromBody] InputDtoAuth req)
         {
+            // On demande au UserService si les infos de connexion sont correctes. Retourne null si non.
             var response = _userService.Authenticate(req);
             if (response == null)
             {
@@ -57,21 +35,27 @@ namespace MyMoneyManagerBackend.Controllers
                     message = "Adresse mail ou mot de passe incorrect"
                 });
             }
-
-            response.Token = GenerateToken(response);
+            
+            //On lie le token aux données de l'utilisateur
+            response.Token = AuthUtils.GenerateToken(response);
 
             return Ok(response);
         }
         [HttpPost]
         [Route("[action]")]
+        //Action pour une requête d'inscription, Si l'ajout est possible, on retourne les infos de l'utilisateur
         public ActionResult<IUser> Signin([FromBody] InputDtoSignin user)
         {
+            //On demande au UserService de s'inscrire, si impossible il renverra null
             var response = _userService.Signin(user);
             if (response==null)
             {
                 return BadRequest(new {message="Un compte existe déjà pour cette adresse mail"});
             }
-
+            
+            //On lie le token aux données de l'utilisateur
+            response.Token = AuthUtils.GenerateToken(response);
+            
             return Ok(response);
         }
 
@@ -80,7 +64,9 @@ namespace MyMoneyManagerBackend.Controllers
         [Route("tokentestadmin")]
         public ActionResult Admin()
         {
-            return Ok(new {message = "OK TOUT SE PASSE BIEN AVEC LE TOKEN ADMIN"});
+            return Ok(new {message = "Vous êtes bien un administrateur," +
+                                     $" vous êtes {User.FindFirst(ClaimTypes.Name)?.Value} et votre id" +
+                                     $" est {User.FindFirst(ClaimTypes.NameIdentifier)?.Value}"});
         }
         [HttpGet]
         [Authorize]
@@ -88,7 +74,8 @@ namespace MyMoneyManagerBackend.Controllers
         
         public ActionResult TokenTest()
         {
-            return Ok(new {message = "OK TOUT SE PASSE BIEN AVEC LE TOKEN LAMBDA"});
-        }
+            return Ok(new {message = "Votre JWT a bien été validé," +
+                                     $" vous êtes {User.FindFirst(ClaimTypes.Name)?.Value} et votre id" +
+                                     $" est {User.FindFirst(ClaimTypes.NameIdentifier)?.Value}"});        }
     }
 }

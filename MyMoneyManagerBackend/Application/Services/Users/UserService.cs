@@ -36,7 +36,6 @@ namespace Application.Services.Users
                 Zip = userInDb.Zip,
                 FirstName = userInDb.FirstName,
                 LastName = userInDb.LastName,
-                Token = "TOKENHERE"
             };
         }
 

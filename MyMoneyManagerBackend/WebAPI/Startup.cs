@@ -17,6 +17,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 using MyMoneyManagerBackend.Controllers;
+using MyMoneyManagerBackend.Utils;
 
 namespace MyMoneyManagerBackend
 {
@@ -42,7 +43,7 @@ namespace MyMoneyManagerBackend
                 {
                     jwtOptions.TokenValidationParameters = new TokenValidationParameters()
                     {
-                        IssuerSigningKey = AuthController.SIGNING_KEY,
+                        IssuerSigningKey = AuthUtils.SIGNING_KEY,
                         ValidateIssuer = false,
                         ValidateAudience = false,
                         ValidateIssuerSigningKey = true,
