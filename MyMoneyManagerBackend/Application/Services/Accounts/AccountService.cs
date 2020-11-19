@@ -1,6 +1,7 @@
 ﻿using System;
 using Application.Repositories;
 using Application.Services.Accounts.Dto;
+using Application.Services.Jars;
 using Application.Services.Users;
 using Domain.Accounts;
 
@@ -11,14 +12,17 @@ namespace Application.Services.Accounts
     {
         private readonly IAccountRepository _accountRepository;
         private readonly IAccountFactory _accountFactory = new AccountFactory();
+        private readonly IJarRepository _jarRepository;
         
-        public AccountService(IAccountRepository accountRepository)
+        public AccountService(IAccountRepository accountRepository, IJarRepository jarRepository)
         {
             _accountRepository = accountRepository;
+            _jarRepository = jarRepository;
         }
         public OutputDtoGetAccount Get(Guid userId)
         {
             var accountInDb = _accountRepository.Get(userId);
+            var availableBalance = _jarRepository.TotalBalanceByUserId(userId);
             if (accountInDb == null)
             {
                 return null;
@@ -26,7 +30,8 @@ namespace Application.Services.Accounts
             return new OutputDtoGetAccount()
             {
                 Balance = accountInDb.Balance,
-                Id = accountInDb.Id
+                Id = accountInDb.Id,
+                AvailableBalance = accountInDb.Balance-availableBalance
             };
         }
 

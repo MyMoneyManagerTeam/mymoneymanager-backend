@@ -9,7 +9,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Services\Jars" />
       <Folder Include="Services\Transactions" />
     </ItemGroup>
 

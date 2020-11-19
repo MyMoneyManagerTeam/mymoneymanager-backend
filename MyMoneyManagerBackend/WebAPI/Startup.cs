@@ -5,9 +5,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using Application.Repositories;
 using Application.Services.Accounts;
+using Application.Services.Jars;
 using Application.Services.Users;
 using Infrastructure.SqlServer.Accounts;
 using Infrastructure.SqlServer.Auth;
+using Infrastructure.SqlServer.Jars;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -68,8 +70,8 @@ namespace MyMoneyManagerBackend
             services.AddSingleton<IUserRepository, UserRepository>();
             services.AddSingleton<IAccountService, AccountService>();
             services.AddSingleton<IAccountRepository, AccountRepository>();
-            // services.AddSingleton<IJarService, JarService>();
-            // services.AddSingleton<IJarRepository, JarRepository>();
+            services.AddSingleton<IJarService, JarService>();
+            services.AddSingleton<IJarRepository, JarRepository>();
             // services.AddSingleton<ITransactionService, TransactionService>();
             // services.AddSingleton<ITransactionRepository, TransactionRepository>();
 

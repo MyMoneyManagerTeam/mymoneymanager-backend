@@ -1,6 +1,8 @@
 ﻿using System.Security.Claims;
+using Application.Services.Accounts;
 using Application.Services.Users;
 using Application.Services.Users.Dto;
+using Domain.Accounts;
 using Domain.Users;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -16,10 +18,12 @@ namespace MyMoneyManagerBackend.Controllers
     public class AuthController : ControllerBase
     {
         private readonly IUserService _userService;
+        private readonly IAccountService _accountService;
 
-        public AuthController(IUserService userService)
+        public AuthController(IUserService userService, IAccountService accountService)
         {
             _userService = userService;
+            _accountService = accountService;
         }
         [HttpPost]
         [Route("[action]")]
@@ -52,6 +56,8 @@ namespace MyMoneyManagerBackend.Controllers
             {
                 return BadRequest(new {message="Un compte existe déjà pour cette adresse mail"});
             }
+            // Si ok on crée le compte bancaire
+            _accountService.Create(response.Id);
             
             //On lie le token aux données de l'utilisateur
             response.Token = AuthUtils.GenerateToken(response);

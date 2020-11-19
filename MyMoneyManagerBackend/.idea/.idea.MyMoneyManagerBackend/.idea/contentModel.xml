@@ -30,7 +30,17 @@
             </e>
             <e p="IAccountService.cs" t="Include" />
           </e>
-          <e p="Jars" t="Include" />
+          <e p="Jars" t="Include">
+            <e p="Dto" t="Include">
+              <e p="InputDtoCreateJar.cs" t="Include" />
+              <e p="InputDtoUpdateJar.cs" t="Include" />
+              <e p="OutputDtoCreateJar.cs" t="Include" />
+              <e p="OutputDtoDeleteJar.cs" t="Include" />
+              <e p="OutputDtoQueryJar.cs" t="Include" />
+            </e>
+            <e p="IJarService.cs" t="Include" />
+            <e p="JarService.cs" t="Include" />
+          </e>
           <e p="Transactions" t="Include" />
           <e p="Users" t="Include">
             <e p="Dto" t="Include">
@@ -129,6 +139,7 @@
         <e p="Controllers" t="Include">
           <e p="AccountController.cs" t="Include" />
           <e p="AuthController.cs" t="Include" />
+          <e p="JarController.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">

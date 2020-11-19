@@ -63,7 +63,6 @@ namespace Infrastructure.SqlServer.Auth
                 {
                     user.Id = (Guid) command.ExecuteScalar();
                     // Ici on décide de créer un compte bancaire si l'utilisateur s'est inscrit
-                    (new AccountRepository()).Create(user.Id);
                 }
                 catch (SqlException ex)
                 {
