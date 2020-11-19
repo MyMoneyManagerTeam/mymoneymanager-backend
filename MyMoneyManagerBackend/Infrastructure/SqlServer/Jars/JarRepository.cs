@@ -110,7 +110,13 @@ namespace Infrastructure.SqlServer.Jars
                 var cmd = conn.CreateCommand();
                 cmd.CommandText = JarSqlServer.ReqSumTotalBalance;
                 cmd.Parameters.AddWithValue($"@{JarSqlServer.ColumnOwner}",userId);
+                var res =  cmd.ExecuteScalar();
+                if (res is System.DBNull)
+                {
+                    return 0;
+                }
                 return (double) cmd.ExecuteScalar();
-            }        }
+            }
+        }
     }
 }
