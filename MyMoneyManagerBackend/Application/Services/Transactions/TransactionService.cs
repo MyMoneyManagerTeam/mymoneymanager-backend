@@ -41,7 +41,7 @@ namespace Application.Services.Transactions
 
         public OutputDtoCreateTransaction Create(Guid userId, InputDtoCreateTransaction transaction)
         {
-            if (userId == transaction.EmitterId)
+            if (userId != transaction.EmitterId)
             {
                 return null;
             }
@@ -74,6 +74,7 @@ namespace Application.Services.Transactions
                 ReceiverId = transactionInDb.ReceiverId,
                 ReceiverName = transactionInDb.ReceiverName,
                 TransactionDate = transactionInDb.TransactionDate
-            };        }
+            }; 
+        }
     }
 }

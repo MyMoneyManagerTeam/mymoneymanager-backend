@@ -32,5 +32,13 @@ namespace MyMoneyManagerBackend.Controllers
 
             return Ok(response);
         }
+
+        [HttpPost]
+        [Authorize(Roles = "admin")]
+        [Route("[action]")]
+        public ActionResult<bool> ModifyBalance([FromBody] InputDtoModifyBalanceAccount inputDtoModifyBalanceAccount)
+        {
+            return Ok(_accountService.ModifyBalance(inputDtoModifyBalanceAccount.UserId, inputDtoModifyBalanceAccount.Amount));
+        }
     }
 }

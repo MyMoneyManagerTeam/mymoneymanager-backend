@@ -54,5 +54,10 @@ namespace Application.Services.Accounts
             var accountFromDto = _accountFactory.GetFromParam(account.Id, account.Balance);
             return _accountRepository.Update(userId, accountFromDto);
         }
+
+        public bool ModifyBalance(Guid userId, double amount)
+        {
+            return _accountRepository.ModifyBalance(userId, amount);
+        }
     }
 }

@@ -24,6 +24,7 @@
           <e p="Accounts" t="Include">
             <e p="AccountService.cs" t="Include" />
             <e p="Dto" t="Include">
+              <e p="InputDtoModifyBalanceAccount.cs" t="Include" />
               <e p="InputDtoUpdateAccount.cs" t="Include" />
               <e p="OutputDtoCreateAccount.cs" t="Include" />
               <e p="OutputDtoGetAccount.cs" t="Include" />

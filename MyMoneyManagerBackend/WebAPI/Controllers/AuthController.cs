@@ -29,6 +29,13 @@ namespace MyMoneyManagerBackend.Controllers
         [Route("[action]")]
         //Action pour une requête de connexion. Si les infos sont correctes, on retourne les infos de l'utilisateur
         public ActionResult<OutputDtoAuth> Authenticate([FromBody] InputDtoAuth req)
+        /*
+         * Exemple d'un InputDtoAuth
+            {
+                "mail": "alexian.moins@outlook.com",
+                "password": "azerty123"
+            }
+         */
         {
             // On demande au UserService si les infos de connexion sont correctes. Retourne null si non.
             var response = _userService.Authenticate(req);
@@ -49,6 +56,21 @@ namespace MyMoneyManagerBackend.Controllers
         [Route("[action]")]
         //Action pour une requête d'inscription, Si l'ajout est possible, on retourne les infos de l'utilisateur
         public ActionResult<IUser> Signin([FromBody] InputDtoSignin user)
+        /*
+         * Exemple d'InputDtoSignin
+           {
+                "mail": "alexian.moins@outlook.com",
+                "firstName": "Alexian",
+                "lastName": "Moins",
+                "password": "azerty123",
+                "country": "Belgique",
+                "area": "Hainaut",
+                "address": "Rue Victor Delporte 171",
+                "zip": 7370,
+                "city": "Dour",
+                "picture": ""
+            }
+         */
         {
             //On demande au UserService de s'inscrire, si impossible il renverra null
             var response = _userService.Signin(user);
