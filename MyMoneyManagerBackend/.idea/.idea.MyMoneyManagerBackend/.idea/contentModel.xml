@@ -41,7 +41,15 @@
             <e p="IJarService.cs" t="Include" />
             <e p="JarService.cs" t="Include" />
           </e>
-          <e p="Transactions" t="Include" />
+          <e p="Transactions" t="Include">
+            <e p="Dto" t="Include">
+              <e p="InputDtoCreateTransaction.cs" t="Include" />
+              <e p="OutputDtoCreateTransaction.cs" t="Include" />
+              <e p="OutputDtoQueryTransaction.cs" t="Include" />
+            </e>
+            <e p="ITransactionService.cs" t="Include" />
+            <e p="TransactionService.cs" t="Include" />
+          </e>
           <e p="Users" t="Include">
             <e p="Dto" t="Include">
               <e p="InputDtoAuth.cs" t="Include" />
@@ -140,6 +148,7 @@
           <e p="AccountController.cs" t="Include" />
           <e p="AuthController.cs" t="Include" />
           <e p="JarController.cs" t="Include" />
+          <e p="TransactionController.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">

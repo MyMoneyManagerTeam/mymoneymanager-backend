@@ -67,5 +67,18 @@ namespace Infrastructure.SqlServer.Accounts
         {
             throw new NotImplementedException();
         }
+
+        public bool ModifyBalance(Guid id, double amount)
+        {
+            using (var conn = Database.GetConnection())
+            {
+                conn.Open();
+                var command = conn.CreateCommand();
+                command.CommandText = AccountSqlServer.ReqModifyBalance;
+                command.Parameters.AddWithValue($"@{AccountSqlServer.ColumnId}", id);
+                command.Parameters.AddWithValue($"@{AccountSqlServer.ColumnBalance}", amount);
+                return command.ExecuteNonQuery() > 0;
+            }
+        }
     }
 }

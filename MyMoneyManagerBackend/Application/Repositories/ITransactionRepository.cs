@@ -7,7 +7,7 @@ namespace Application.Repositories
 {
     public interface ITransactionRepository
     {
-        IEnumerable<ITransaction> Query(IUser user);
+        IEnumerable<ITransaction> Query(Guid userId);
         ITransaction Get(Guid id);
         ITransaction Create(ITransaction transaction);
         bool Update(Guid id, ITransaction transaction);

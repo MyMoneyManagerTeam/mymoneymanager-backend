@@ -14,5 +14,10 @@
         public static readonly string ReqCreate = 
             $@"INSERT INTO {TableName} ({ColumnId},{ColumnBalance}) VALUES (@{ColumnId},@{ColumnBalance})
         ";
+
+        public static readonly string ReqModifyBalance = 
+            $@"UPDATE {TableName} SET {ColumnBalance}=CASE WHEN {ColumnBalance} IS NULL OR {ColumnBalance}=0 THEN @{ColumnBalance}  
+            ELSE {ColumnBalance}+@{ColumnBalance} END WHERE {ColumnId}=@{ColumnId}  
+            ";
     }
 }

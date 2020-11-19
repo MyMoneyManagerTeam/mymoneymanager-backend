@@ -13,7 +13,7 @@ namespace Infrastructure.SqlServer.Transactions
     {
         private IInstanceFromReaderFactory<ITransaction> _transactionFactory = new TransactionFactory();
         
-        public IEnumerable<ITransaction> Query(IUser user)
+        public IEnumerable<ITransaction> Query(Guid userId)
         {
             IList<ITransaction> res = new List<ITransaction>();
             using (var connection = Database.GetConnection())
@@ -21,8 +21,8 @@ namespace Infrastructure.SqlServer.Transactions
                 connection.Open();
                 var command = connection.CreateCommand();
                 command.CommandText = TransactionSqlServer.ReqQuery;
-                command.Parameters.AddWithValue($"@{TransactionSqlServer.ColumnEmitterId}",user.Id);
-                command.Parameters.AddWithValue($"@{TransactionSqlServer.ColumnReceiverId}",user.Id);
+                command.Parameters.AddWithValue($"@{TransactionSqlServer.ColumnEmitterId}",userId);
+                command.Parameters.AddWithValue($"@{TransactionSqlServer.ColumnReceiverId}",userId);
                 var reader = command.ExecuteReader(CommandBehavior.CloseConnection);
                 while (reader.Read())
                 {
