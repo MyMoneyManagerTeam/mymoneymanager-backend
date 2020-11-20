@@ -25,14 +25,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2a471809-f355-4591-a512-e5f8f5a49a17" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Application/Services/Accounts/Dto/InputDtoModifyBalanceAccount.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MyMoneyManagerBackend/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyMoneyManagerBackend/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MyMoneyManagerBackend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyMoneyManagerBackend/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Services/Accounts/AccountService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Services/Accounts/AccountService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Services/Accounts/IAccountService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Services/Accounts/IAccountService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Services/Transactions/TransactionService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Services/Transactions/TransactionService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebAPI/Controllers/AccountController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Controllers/AccountController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebAPI/Controllers/AuthController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Controllers/AuthController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAPI/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Properties/launchSettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAPI/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAPI/WebAPI.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/WebAPI.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAPI/obj/Debug/netcoreapp3.1/WebAPI.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/obj/Debug/netcoreapp3.1/WebAPI.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAPI/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAPI/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAPI/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAPI/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +49,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Application/Services/Users/Dto/OutputDtoAuth.cs" />
         <option value="$PROJECT_DIR$/Application/Services/Users/Dto/OutputDtoSignin.cs" />
         <option value="$PROJECT_DIR$/WebAPI/Utils/AuthUtils.cs" />
         <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Accounts/AccountRepositorySqlServer.cs" />
@@ -82,7 +82,6 @@
         <option value="$PROJECT_DIR$/Application/Services/Jars/JarService.cs" />
         <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Jars/JarRepository.cs" />
         <option value="$PROJECT_DIR$/Application/Services/Transactions/ITransactionService.cs" />
-        <option value="$PROJECT_DIR$/WebAPI/Startup.cs" />
         <option value="$PROJECT_DIR$/Application/Repositories/ITransactionRepository.cs" />
         <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Transactions/TransactionRepository.cs" />
         <option value="$PROJECT_DIR$/Application/Services/Transactions/Dto/OutputDtoQueryTransaction.cs" />
@@ -99,6 +98,8 @@
         <option value="$PROJECT_DIR$/WebAPI/Controllers/AccountController.cs" />
         <option value="$PROJECT_DIR$/Application/Services/Transactions/TransactionService.cs" />
         <option value="$PROJECT_DIR$/WebAPI/Controllers/AuthController.cs" />
+        <option value="$PROJECT_DIR$/WebAPI/Properties/launchSettings.json" />
+        <option value="$PROJECT_DIR$/WebAPI/Startup.cs" />
       </list>
     </option>
   </component>
@@ -250,7 +251,8 @@
       <workItem from="1605306067247" duration="14020000" />
       <workItem from="1605357615993" duration="1922000" />
       <workItem from="1605714639572" duration="13968000" />
-      <workItem from="1605792852874" duration="12498000" />
+      <workItem from="1605792852874" duration="12505000" />
+      <workItem from="1605811662227" duration="2657000" />
     </task>
     <servers />
   </component>
@@ -276,26 +278,26 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1877" height="351" key="GridCell.Tab.0.bottom" timestamp="1605809054977">
+    <state width="1877" height="351" key="GridCell.Tab.0.bottom" timestamp="1605834087268">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="914" height="349" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1605273420745" />
-    <state width="1877" height="351" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1605809054977" />
-    <state width="1877" height="351" key="GridCell.Tab.0.center" timestamp="1605809054977">
+    <state width="1877" height="351" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1605834087268" />
+    <state width="1877" height="351" key="GridCell.Tab.0.center" timestamp="1605834087267">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="914" height="349" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1605273420745" />
-    <state width="1877" height="351" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1605809054977" />
-    <state width="1877" height="351" key="GridCell.Tab.0.left" timestamp="1605809054977">
+    <state width="1877" height="351" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1605834087267" />
+    <state width="1877" height="351" key="GridCell.Tab.0.left" timestamp="1605834087267">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="914" height="349" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1605273420744" />
-    <state width="1877" height="351" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1605809054977" />
-    <state width="1877" height="351" key="GridCell.Tab.0.right" timestamp="1605809054977">
+    <state width="1877" height="351" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1605834087267" />
+    <state width="1877" height="351" key="GridCell.Tab.0.right" timestamp="1605834087268">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="914" height="349" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1605273420745" />
-    <state width="1877" height="351" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1605809054977" />
+    <state width="1877" height="351" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1605834087268" />
     <state x="552" y="252" key="Rider.ProjectTemplateDialog.Size" timestamp="1605272940990">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

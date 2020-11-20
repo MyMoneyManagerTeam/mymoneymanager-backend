@@ -21,6 +21,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
 using MyMoneyManagerBackend.Controllers;
 using MyMoneyManagerBackend.Utils;
 
@@ -39,6 +40,45 @@ namespace MyMoneyManagerBackend
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddSwaggerGen(c => {  
+                c.SwaggerDoc("mymoneymanager", new OpenApiInfo {  
+                    Version = "v1",  
+                    Title = "My Money Manager",  
+                    Description = "API de notre projet My Money manager",  
+                    Contact = new OpenApiContact() {  
+                        Name = "MyMoneyManager Team", 
+                        Email = "lopez.lucas@hotmail.com", 
+                        Url = new Uri("https://github.com/MyMoneyManagerTeam")  
+                    }  
+                });
+                // Bearer token authentication
+                var securityDefinition = new OpenApiSecurityScheme()
+                {
+                    Name = "Bearer",
+                    BearerFormat = "JWT",
+                    Scheme = "bearer",
+                    Description = "Specify the authorization token.",
+                    In = ParameterLocation.Header,
+                    Type = SecuritySchemeType.Http,
+                };
+                c.AddSecurityDefinition("jwt_auth", securityDefinition);
+
+                // Make sure swagger UI requires a Bearer token specified
+                var securityScheme = new OpenApiSecurityScheme()
+                {
+                    Reference = new OpenApiReference()
+                    {
+                        Id = "jwt_auth",
+                        Type = ReferenceType.SecurityScheme
+                    }
+                };
+                var securityRequirements = new OpenApiSecurityRequirement()
+                {
+                    {securityScheme, new string[] { }},
+                };
+                c.AddSecurityRequirement(securityRequirements);
+            });  
             services.AddAuthentication(options =>
                 {
                     options.DefaultAuthenticateScheme = "JwtBearer";
@@ -86,6 +126,11 @@ namespace MyMoneyManagerBackend
             {
                 app.UseDeveloperExceptionPage();
             }
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/mymoneymanager/swagger.json", "My API V1");
+            });
 
             app.UseHttpsRedirection();
 
