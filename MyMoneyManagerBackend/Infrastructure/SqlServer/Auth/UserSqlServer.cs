@@ -29,5 +29,11 @@
             VALUES (NEWID(),@{ColumnMail},@{ColumnPassword},@{ColumnFirstName},@{ColumnLastName},@{ColumnCountry},
             @{ColumnArea},@{ColumnAddress},@{ColumnZipCode},@{ColumnCity},NULL,1,0)
         ";
+
+        public static readonly string ReqUpload = $@"
+            UPDATE {TableName} SET
+            {ColumnPicture} = @{ColumnPicture}
+            WHERE {ColumnId} = @{ColumnId}
+        ";
     }
 }

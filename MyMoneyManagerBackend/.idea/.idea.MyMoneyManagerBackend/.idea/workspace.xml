@@ -26,14 +26,13 @@
   <component name="ChangeListManager">
     <list default="true" id="2a471809-f355-4591-a512-e5f8f5a49a17" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MyMoneyManagerBackend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyMoneyManagerBackend/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebAPI/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Properties/launchSettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebAPI/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebAPI/WebAPI.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/WebAPI.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebAPI/obj/Debug/netcoreapp3.1/WebAPI.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/obj/Debug/netcoreapp3.1/WebAPI.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebAPI/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebAPI/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebAPI/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebAPI/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/Repositories/IUserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Repositories/IUserRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/Services/Users/Dto/InputDtoSignin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Services/Users/Dto/InputDtoSignin.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/Services/Users/IUserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Services/Users/IUserService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/Services/Users/UserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Services/Users/UserService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/SqlServer/Auth/UserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/SqlServer/Auth/UserRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/SqlServer/Auth/UserSqlServer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/SqlServer/Auth/UserSqlServer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAPI/Controllers/AuthController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Controllers/AuthController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,28 +44,16 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/051A8F29-384F-4B34-9211-78615BFA6F0C/1/System.Data.SqlClient.notsupported.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/F8CB0D17-45A0-4DC2-BE43-7E565698A3D2/D/IFormFile.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Application/Services/Users/Dto/OutputDtoSignin.cs" />
-        <option value="$PROJECT_DIR$/WebAPI/Utils/AuthUtils.cs" />
-        <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Accounts/AccountRepositorySqlServer.cs" />
-        <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Transactions/TransactionSqlServer.cs" />
-        <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Factories/TransactionFactory.cs" />
-        <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Factories/JarFactory.cs" />
-        <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Factories/UserFactory.cs" />
-        <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Auth/UserSqlServer.cs" />
-        <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Factories/AccountFactory.cs" />
-        <option value="$PROJECT_DIR$/Application/Services/Accounts/Dto/InputDtoGetAccount.cs" />
-        <option value="$PROJECT_DIR$/Application/Services/Accounts/Dto/InputDtoCreateAccount.cs" />
         <option value="$PROJECT_DIR$/Application/Services/Accounts/Dto/OutputDtoUpdateAccount.cs" />
         <option value="$PROJECT_DIR$/Domain/Accounts/AccountFactory.cs" />
         <option value="$PROJECT_DIR$/Domain/Accounts/IAccountFactory.cs" />
         <option value="$PROJECT_DIR$/Application/Services/Accounts/Dto/InputDtoUpdateAccount.cs" />
         <option value="$PROJECT_DIR$/Application/Services/Accounts/Dto/OutputDtoCreateAccount.cs" />
-        <option value="$PROJECT_DIR$/Application/Services/Users/UserService.cs" />
-        <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Auth/UserRepository.cs" />
         <option value="$PROJECT_DIR$/Application/Services/Jars/Dto/OutputDtoQueryJar.cs" />
         <option value="$PROJECT_DIR$/Application/Services/Jars/Dto/OutputDtoDeleteJar.cs" />
         <option value="$PROJECT_DIR$/Application/Services/Jars/Dto/OutputDtoCreateJar.cs" />
@@ -97,9 +84,22 @@
         <option value="$PROJECT_DIR$/Application/Services/Accounts/Dto/InputDtoModifyBalanceAccount.cs" />
         <option value="$PROJECT_DIR$/WebAPI/Controllers/AccountController.cs" />
         <option value="$PROJECT_DIR$/Application/Services/Transactions/TransactionService.cs" />
-        <option value="$PROJECT_DIR$/WebAPI/Controllers/AuthController.cs" />
         <option value="$PROJECT_DIR$/WebAPI/Properties/launchSettings.json" />
         <option value="$PROJECT_DIR$/WebAPI/Startup.cs" />
+        <option value="$PROJECT_DIR$/Domain/Users/IUserFactory.cs" />
+        <option value="$PROJECT_DIR$/Domain/Users/UserFactory.cs" />
+        <option value="$PROJECT_DIR$/Domain/Users/User.cs" />
+        <option value="$PROJECT_DIR$/Domain/Users/IUser.cs" />
+        <option value="$PROJECT_DIR$/Application/Services/Users/Dto/OutputDtoSignin.cs" />
+        <option value="$PROJECT_DIR$/Application/Services/Users/Dto/OutputDtoAuth.cs" />
+        <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Factories/UserFactory.cs" />
+        <option value="$PROJECT_DIR$/Application/Services/Users/Dto/InputDtoSignin.cs" />
+        <option value="$PROJECT_DIR$/Application/Services/Users/IUserService.cs" />
+        <option value="$PROJECT_DIR$/Application/Repositories/IUserRepository.cs" />
+        <option value="$PROJECT_DIR$/Application/Services/Users/UserService.cs" />
+        <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Auth/UserRepository.cs" />
+        <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Auth/UserSqlServer.cs" />
+        <option value="$PROJECT_DIR$/WebAPI/Controllers/AuthController.cs" />
       </list>
     </option>
   </component>
@@ -253,6 +253,8 @@
       <workItem from="1605714639572" duration="13968000" />
       <workItem from="1605792852874" duration="12505000" />
       <workItem from="1605811662227" duration="2657000" />
+      <workItem from="1605877995302" duration="129000" />
+      <workItem from="1605917205743" duration="11595000" />
     </task>
     <servers />
   </component>
@@ -278,26 +280,26 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1877" height="351" key="GridCell.Tab.0.bottom" timestamp="1605834087268">
+    <state width="1877" height="351" key="GridCell.Tab.0.bottom" timestamp="1605931939331">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="914" height="349" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1605273420745" />
-    <state width="1877" height="351" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1605834087268" />
-    <state width="1877" height="351" key="GridCell.Tab.0.center" timestamp="1605834087267">
+    <state width="1877" height="351" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1605931939331" />
+    <state width="1877" height="351" key="GridCell.Tab.0.center" timestamp="1605931939331">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="914" height="349" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1605273420745" />
-    <state width="1877" height="351" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1605834087267" />
-    <state width="1877" height="351" key="GridCell.Tab.0.left" timestamp="1605834087267">
+    <state width="1877" height="351" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1605931939331" />
+    <state width="1877" height="351" key="GridCell.Tab.0.left" timestamp="1605931939331">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="914" height="349" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1605273420744" />
-    <state width="1877" height="351" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1605834087267" />
-    <state width="1877" height="351" key="GridCell.Tab.0.right" timestamp="1605834087268">
+    <state width="1877" height="351" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1605931939331" />
+    <state width="1877" height="351" key="GridCell.Tab.0.right" timestamp="1605931939331">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="914" height="349" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1605273420745" />
-    <state width="1877" height="351" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1605834087268" />
+    <state width="1877" height="351" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1605931939331" />
     <state x="552" y="252" key="Rider.ProjectTemplateDialog.Size" timestamp="1605272940990">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -319,10 +321,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1605203817663" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1605216651783">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1605925561485">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1297" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1603584775437" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1605216651783" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1605925561485" />
   </component>
 </project>

@@ -11,7 +11,6 @@
         public string Address { get; set; }
         public int Zip { get; set; }
         public string City { get; set; }
-        public byte[] Picture { get; set; }
 
         public InputDtoSignin()
         {

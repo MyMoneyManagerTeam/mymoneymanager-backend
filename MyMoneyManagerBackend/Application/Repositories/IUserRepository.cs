@@ -1,5 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Domain.Users;
+using Microsoft.AspNetCore.Http;
 
 namespace Application.Repositories
 {
@@ -10,5 +12,6 @@ namespace Application.Repositories
         IUser Create(IUser user);
         bool Update(int id, IUser user);
         bool Delete(int id);
+        bool UploadImage(Guid userId, IFormFile image);
     }
 }

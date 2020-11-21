@@ -1,12 +1,16 @@
-﻿using System.Security.Claims;
+﻿using System;
+using System.Security.Claims;
+using System.Threading.Tasks;
 using Application.Services.Accounts;
 using Application.Services.Users;
 using Application.Services.Users.Dto;
 using Domain.Accounts;
 using Domain.Users;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MyMoneyManagerBackend.Utils;
+using Newtonsoft.Json.Linq;
 
 /*
  * ATTENTION RESTE A AJOUTER UNE FONCTION DE HASH POUR LE MDP.
@@ -85,6 +89,17 @@ namespace MyMoneyManagerBackend.Controllers
             response.Token = AuthUtils.GenerateToken(response);
             
             return Ok(response);
+        }
+
+        [HttpPost]
+        [Authorize]
+        [Route("[action]")]
+        public ActionResult<bool> UploadImage(IFormFile picture)
+        {
+            if (_userService.UploadImage(new Guid(User.FindFirst(ClaimTypes.NameIdentifier)?.Value), picture))
+                return Ok();
+            else
+                return BadRequest(new {message = "Impossible d'ajouter l'image"});
         }
 
         [HttpGet]

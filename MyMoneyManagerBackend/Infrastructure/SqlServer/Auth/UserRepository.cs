@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.IO;
 using Application.Repositories;
 using Domain.Users;
 using Infrastructure.SqlServer.Accounts;
 using Infrastructure.SqlServer.Factories;
+using Microsoft.AspNetCore.Http;
 using UserFactory = Infrastructure.SqlServer.Factories.UserFactory;
 
 namespace Infrastructure.SqlServer.Auth
@@ -81,6 +83,25 @@ namespace Infrastructure.SqlServer.Auth
         public bool Delete(int id)
         {
             throw new System.NotImplementedException();
+        }
+
+        public bool UploadImage(Guid userId, IFormFile image)
+        {
+            using (var ms = new MemoryStream())
+            {
+                image.CopyTo(ms);
+                var fileBytes = ms.ToArray();
+                string s = Convert.ToBase64String(fileBytes);
+                using (var conn = Database.GetConnection())
+                {
+                    conn.Open();
+                    var cmd = conn.CreateCommand();
+                    cmd.CommandText = UserSqlServer.ReqUpload;
+                    cmd.Parameters.AddWithValue($"@{UserSqlServer.ColumnId}",userId);
+                    cmd.Parameters.AddWithValue($"@{UserSqlServer.ColumnPicture}", fileBytes);
+                    return cmd.ExecuteNonQuery() > 0;
+                }
+            }
         }
     }
 }
