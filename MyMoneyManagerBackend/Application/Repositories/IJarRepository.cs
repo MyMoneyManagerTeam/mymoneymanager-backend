@@ -10,7 +10,7 @@ namespace Application.Repositories
         IEnumerable<IJar> Query(Guid userId);
         IJar Get(Guid userId, Guid jarId);
         IJar Create(IJar jar);
-        bool Update(Guid id, IJar jar);
+        bool Update(Guid jarId, IJar jar);
         bool Delete(Guid userId, Guid jarId);
         double TotalBalanceByUserId(Guid userId);
     }

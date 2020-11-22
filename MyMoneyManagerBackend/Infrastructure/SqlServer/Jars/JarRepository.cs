@@ -73,18 +73,21 @@ namespace Infrastructure.SqlServer.Jars
             return jar;
         }
 
-        public bool Update(Guid id, IJar jar)
+        public bool Update(Guid jarId, IJar jar)
         {
             using (var conn = Database.GetConnection())
             {
                 conn.Open();
                 var cmd = conn.CreateCommand();
                 cmd.CommandText = JarSqlServer.ReqPut;
+                cmd.Parameters.AddWithValue($"@{JarSqlServer.ColumnId}", jarId);
                 cmd.Parameters.AddWithValue($"@{JarSqlServer.ColumnOwner}",jar.Owner);
                 cmd.Parameters.AddWithValue($"@{JarSqlServer.ColumnDescription}",jar.Description);
                 cmd.Parameters.AddWithValue($"@{JarSqlServer.ColumnBalance}",jar.Balance);
                 cmd.Parameters.AddWithValue($"@{JarSqlServer.ColumnName}",jar.Name);
-                return cmd.ExecuteNonQuery() > 0;
+                cmd.Parameters.AddWithValue($"@{JarSqlServer.ColumnMax}",jar.Max);
+                var res = cmd.ExecuteNonQuery() > 0;
+                return res;
             }
         }
 

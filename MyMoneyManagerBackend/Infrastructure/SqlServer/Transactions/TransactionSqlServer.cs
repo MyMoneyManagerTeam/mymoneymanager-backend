@@ -12,9 +12,24 @@
         public static readonly string ColumnEmitterName = "emitter_name";
         public static readonly string ColumnReceiverName = "receiver_name";
 
-        public static readonly string ReqQuery =
+        public static readonly string ReqQueryBase =
             $@"SELECT * FROM {TableName} 
-            WHERE {ColumnEmitterId}=@{ColumnEmitterId} OR {ColumnReceiverId}=@{ColumnReceiverId}
+            WHERE ({ColumnEmitterId}=@{ColumnEmitterId} OR {ColumnReceiverId}=@{ColumnReceiverId}) 
+            
+        ";
+        public static readonly string ReqQueryDays = $@"
+             AND ({ColumnTransactionDate}>= (GETDATE() - @days)) 
+        ";
+
+        public static readonly string ReqQueryOrder = $@"
+             ORDER BY {ColumnTransactionDate} 
+        ";
+        public static readonly string ReqQueryOffset = $@"
+             OFFSET @offset ROWS  
+        ";
+
+        public static readonly string ReqQueryFetch = $@"
+             FETCH NEXT @number ROWS ONLY 
         ";
 
         public static readonly string ReqCreate = 
@@ -25,5 +40,7 @@
             (NEWID(),@{ColumnEmitterId},@{ColumnReceiverId},@{ColumnAmount},@{ColumnTransactionDate},
             @{ColumnDescription},@{ColumnEmitterName},@{ColumnReceiverName})
         ";
+
+        
     }
 }

@@ -28,17 +28,18 @@
         public static readonly string ReqPut = $@"
             UPDATE {TableName} SET
             {ColumnBalance} = @{ColumnBalance}, 
+            {ColumnMax} = @{ColumnMax},
             {ColumnName} = @{ColumnName},  
             {ColumnDescription} = @{ColumnDescription}
-            WHERE {ColumnId} = @{ColumnId} AND {ColumnOwner} = @{ColumnOwner}
+            WHERE {ColumnId}=@{ColumnId} AND {ColumnOwner}=@{ColumnOwner}
         ";
         public static readonly string ReqDelete = $@"
             DELETE FROM {TableName} 
-            WHERE {ColumnId} = {ColumnId} AND {ColumnOwner} = {ColumnOwner}
+            WHERE {ColumnId} = @{ColumnId} AND {ColumnOwner} = @{ColumnOwner}
         ";
         
         public static readonly string ReqSumTotalBalance = $@"
-            SELECT SUM({ColumnBalance}) FROM {TableName} WHERE {ColumnOwner} = @{ColumnOwner}
+            SELECT SUM({ColumnBalance}) FROM {TableName} WHERE {ColumnOwner}=@{ColumnOwner}
         ";
 
 

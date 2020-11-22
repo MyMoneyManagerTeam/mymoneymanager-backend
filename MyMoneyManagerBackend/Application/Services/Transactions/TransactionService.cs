@@ -22,10 +22,10 @@ namespace Application.Services.Transactions
             _accountRepository = accountRepository;
         }
 
-        public IEnumerable<OutputDtoQueryTransaction> Query(Guid userId)
+        public IEnumerable<OutputDtoQueryTransaction> Query(Guid userId,int number, int page,int days)
         {
             return _transactionRepository
-                .Query(userId)
+                .Query(userId,number,page, days)
                 .Select(transaction => new OutputDtoQueryTransaction
                 {
                     Amount = transaction.Amount,

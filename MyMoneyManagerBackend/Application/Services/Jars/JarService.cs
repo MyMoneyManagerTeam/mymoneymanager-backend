@@ -65,7 +65,7 @@ namespace Application.Services.Jars
 
         public bool Update(Guid userId, InputDtoUpdateJar jar)
         {
-            var jarFromDto = _jarFactory.GetFromParam(jar.Owner, jar.Description, jar.Name, jar.Max, jar.Balance);
+            var jarFromDto = _jarFactory.GetFromParam(userId, jar.Description, jar.Name, jar.Max, jar.Balance);
             return _jarRepository.Update(jar.Id, jarFromDto);
         }
 

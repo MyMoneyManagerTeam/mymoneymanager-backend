@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Security.Claims;
 using Application.Services.Transactions;
 using Application.Services.Transactions.Dto;
@@ -23,11 +24,12 @@ namespace MyMoneyManagerBackend.Controllers
         [HttpGet]
         [Authorize]
         [Route("[action]")]
-        public ActionResult<IEnumerable<OutputDtoQueryTransaction>> Query()
+        public ActionResult<IEnumerable<OutputDtoQueryTransaction>> Query(int number,int page, int days)
         {
-            return Ok(_transactionService
-                .Query(new Guid(User.FindFirst(ClaimTypes.NameIdentifier)?.Value))
-            );
+            Console.WriteLine($"num:{number} page: {page} days: {days}");
+            var res = _transactionService
+                .Query(new Guid(User.FindFirst(ClaimTypes.NameIdentifier)?.Value), number, page,days);
+            return Ok(res);
         }
 
         [HttpPost]

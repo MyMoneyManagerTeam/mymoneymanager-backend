@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Security.Claims;
 using Application.Services.Jars;
 using Application.Services.Jars.Dto;
@@ -21,7 +22,7 @@ namespace MyMoneyManagerBackend.Controllers
         [HttpGet]
         [Authorize]
         [Route("[action]")]
-        public ActionResult<OutputDtoQueryJar> Query()
+        public ActionResult<IEnumerable<OutputDtoQueryJar>> Query()
         {
             return Ok(_jarService.Query(
                 new Guid(User.FindFirst(ClaimTypes.NameIdentifier)?.Value))

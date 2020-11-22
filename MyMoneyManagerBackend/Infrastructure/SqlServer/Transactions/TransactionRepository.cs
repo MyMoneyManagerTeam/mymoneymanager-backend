@@ -13,16 +13,34 @@ namespace Infrastructure.SqlServer.Transactions
     {
         private IInstanceFromReaderFactory<ITransaction> _transactionFactory = new TransactionFactory();
         
-        public IEnumerable<ITransaction> Query(Guid userId)
+        public IEnumerable<ITransaction> Query(Guid userId,int number, int page, int days)
         {
             IList<ITransaction> res = new List<ITransaction>();
             using (var connection = Database.GetConnection())
             {
                 connection.Open();
                 var command = connection.CreateCommand();
-                command.CommandText = TransactionSqlServer.ReqQuery;
-                command.Parameters.AddWithValue($"@{TransactionSqlServer.ColumnEmitterId}",userId);
-                command.Parameters.AddWithValue($"@{TransactionSqlServer.ColumnReceiverId}",userId);
+                command.CommandText = TransactionSqlServer.ReqQueryBase;
+                command.Parameters.AddWithValue($"@{TransactionSqlServer.ColumnEmitterId}", userId);
+                command.Parameters.AddWithValue($"@{TransactionSqlServer.ColumnReceiverId}", userId);
+                if (days > 0)
+                {
+                    command.CommandText += TransactionSqlServer.ReqQueryDays;
+                    command.Parameters.AddWithValue("@days", days);
+                }
+                command.CommandText += TransactionSqlServer.ReqQueryOrder;
+                if (page >= 0 && number > 0)
+                {
+                    command.CommandText += TransactionSqlServer.ReqQueryOffset;
+                    command.Parameters.AddWithValue("@offset", number * page);
+                }
+
+                if (number > 0)
+                {
+                    command.CommandText += TransactionSqlServer.ReqQueryFetch;
+                    command.Parameters.AddWithValue("@number", number);
+                }
+
                 var reader = command.ExecuteReader(CommandBehavior.CloseConnection);
                 while (reader.Read())
                 {
