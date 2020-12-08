@@ -41,6 +41,10 @@
             @{ColumnDescription},@{ColumnEmitterName},@{ColumnReceiverName})
         ";
 
-        
+
+        public static readonly string ReqCount = $@"
+            SELECT COUNT({ColumnId}) FROM {TableName} 
+            WHERE ({ColumnEmitterId}=@{ColumnEmitterId} OR {ColumnReceiverId}=@{ColumnReceiverId}) 
+        ";
     }
 }

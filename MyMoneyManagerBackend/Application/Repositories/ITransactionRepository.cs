@@ -12,5 +12,6 @@ namespace Application.Repositories
         ITransaction Create(ITransaction transaction);
         bool Update(Guid id, ITransaction transaction);
         bool Delete(Guid id);
+        int CountTransactions(Guid guid);
     }
 }

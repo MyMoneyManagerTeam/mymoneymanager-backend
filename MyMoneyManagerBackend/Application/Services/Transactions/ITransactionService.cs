@@ -8,5 +8,6 @@ namespace Application.Services.Transactions
     {
         IEnumerable<OutputDtoQueryTransaction> Query(Guid userId,int number,int page, int days);
         OutputDtoCreateTransaction Create(Guid userId,InputDtoCreateTransaction jar);
+        int CountTransactions(Guid guid);
     }
 }

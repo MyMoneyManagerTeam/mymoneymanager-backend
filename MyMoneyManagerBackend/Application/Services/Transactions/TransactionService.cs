@@ -22,7 +22,7 @@ namespace Application.Services.Transactions
             _accountRepository = accountRepository;
         }
 
-        public IEnumerable<OutputDtoQueryTransaction> Query(Guid userId,int number, int page,int days)
+        public IEnumerable<OutputDtoQueryTransaction> Query(Guid userId,int number, int page,int days) //automapper lib pour transformer les types dto<->model
         {
             return _transactionRepository
                 .Query(userId,number,page, days)
@@ -41,14 +41,14 @@ namespace Application.Services.Transactions
 
         public OutputDtoCreateTransaction Create(Guid userId, InputDtoCreateTransaction transaction)
         {
-            if (userId != transaction.EmitterId)
+            if (userId != transaction.EmitterId)//deplacer dans un validateur du controller
             {
                 return null;
             }
 
             if (transaction.Amount>(_accountRepository.Get(userId).Balance-_jarRepository.TotalBalanceByUserId(userId)))
             {
-                //serait cool de throw une erreur solde insuffisant
+                //serait cool de throw une erreur solde insuffisant (custom exception)
                 return null;
             }
             var transactionFromDto = _transactionFactory.CreateFromParam(transaction.EmitterId, transaction.ReceiverId,
@@ -75,6 +75,11 @@ namespace Application.Services.Transactions
                 ReceiverName = transactionInDb.ReceiverName,
                 TransactionDate = transactionInDb.TransactionDate
             }; 
+        }
+
+        public int CountTransactions(Guid guid)
+        {
+            return _transactionRepository.CountTransactions(guid);
         }
     }
 }

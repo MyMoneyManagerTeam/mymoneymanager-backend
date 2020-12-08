@@ -9,7 +9,7 @@ using TransactionFactory = Infrastructure.SqlServer.Factories.TransactionFactory
 
 namespace Infrastructure.SqlServer.Transactions
 {
-    public class TransactionRepository: ITransactionRepository
+    public class TransactionRepository: ITransactionRepository //EntityFramework fluent
     {
         private IInstanceFromReaderFactory<ITransaction> _transactionFactory = new TransactionFactory();
         
@@ -73,6 +73,19 @@ namespace Infrastructure.SqlServer.Transactions
                 transaction.Id = (Guid) command.ExecuteScalar();
             }
             return transaction;
+        }
+
+        public int CountTransactions(Guid guid)
+        {
+            using (var conn = Database.GetConnection())
+            {
+                conn.Open();
+                var cmd = conn.CreateCommand();
+                cmd.CommandText = TransactionSqlServer.ReqCount;
+                cmd.Parameters.AddWithValue($"@{TransactionSqlServer.ColumnEmitterId}",guid);
+                cmd.Parameters.AddWithValue($"@{TransactionSqlServer.ColumnReceiverId}",guid);
+                return (int)cmd.ExecuteScalar();
+            }
         }
 
         public bool Update(Guid id, ITransaction transaction)

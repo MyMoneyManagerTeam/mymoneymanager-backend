@@ -24,12 +24,21 @@ namespace MyMoneyManagerBackend.Controllers
         [HttpGet]
         [Authorize]
         [Route("[action]")]
-        public ActionResult<IEnumerable<OutputDtoQueryTransaction>> Query(int number,int page, int days)
+        public ActionResult<CustomOutputDtoQueryTransaction> Query(int number,int page, int days)
         {
-            Console.WriteLine($"num:{number} page: {page} days: {days}");
+            int count = _transactionService.CountTransactions(new Guid(User.FindFirst(ClaimTypes.NameIdentifier)?.Value));
             var res = _transactionService
                 .Query(new Guid(User.FindFirst(ClaimTypes.NameIdentifier)?.Value), number, page,days);
-            return Ok(res);
+            return Ok(new CustomOutputDtoQueryTransaction
+            {
+                TotalCount = count,
+                UserTransactions = res
+            });
+        }
+        public class CustomOutputDtoQueryTransaction
+        {
+            public int TotalCount { get; set; }
+            public IEnumerable<OutputDtoQueryTransaction> UserTransactions { get; set; }
         }
 
         [HttpPost]

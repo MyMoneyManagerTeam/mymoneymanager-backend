@@ -26,17 +26,13 @@
   <component name="ChangeListManager">
     <list default="true" id="2a471809-f355-4591-a512-e5f8f5a49a17" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MyMoneyManagerBackend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyMoneyManagerBackend/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Repositories/IJarRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Repositories/IJarRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Application/Repositories/ITransactionRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Repositories/ITransactionRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Services/Jars/JarService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Services/Jars/JarService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Application/Services/Transactions/ITransactionService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Services/Transactions/ITransactionService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Application/Services/Transactions/TransactionService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Services/Transactions/TransactionService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Infrastructure/SqlServer/Factories/TransactionFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/SqlServer/Factories/TransactionFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Infrastructure/SqlServer/Jars/JarRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/SqlServer/Jars/JarRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Infrastructure/SqlServer/Jars/JarSqlServer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/SqlServer/Jars/JarSqlServer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Transactions/Transaction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Transactions/Transaction.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Infrastructure/SqlServer/Transactions/TransactionRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/SqlServer/Transactions/TransactionRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Infrastructure/SqlServer/Transactions/TransactionSqlServer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/SqlServer/Transactions/TransactionSqlServer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebAPI/Controllers/JarController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Controllers/JarController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAPI/Controllers/AuthController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Controllers/AuthController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebAPI/Controllers/TransactionController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Controllers/TransactionController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -54,7 +50,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Domain/Accounts/IAccountFactory.cs" />
         <option value="$PROJECT_DIR$/Application/Services/Accounts/Dto/InputDtoUpdateAccount.cs" />
         <option value="$PROJECT_DIR$/Application/Services/Accounts/Dto/OutputDtoCreateAccount.cs" />
         <option value="$PROJECT_DIR$/Application/Services/Jars/Dto/OutputDtoQueryJar.cs" />
@@ -92,18 +87,19 @@
         <option value="$PROJECT_DIR$/Application/Services/Users/UserService.cs" />
         <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Auth/UserRepository.cs" />
         <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Auth/UserSqlServer.cs" />
-        <option value="$PROJECT_DIR$/WebAPI/Controllers/AuthController.cs" />
         <option value="$PROJECT_DIR$/WebAPI/Controllers/JarController.cs" />
         <option value="$PROJECT_DIR$/Application/Services/Jars/JarService.cs" />
         <option value="$PROJECT_DIR$/Application/Repositories/IJarRepository.cs" />
         <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Jars/JarSqlServer.cs" />
         <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Jars/JarRepository.cs" />
         <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Factories/TransactionFactory.cs" />
-        <option value="$PROJECT_DIR$/WebAPI/Controllers/TransactionController.cs" />
+        <option value="$PROJECT_DIR$/WebAPI/Controllers/AuthController.cs" />
         <option value="$PROJECT_DIR$/Application/Services/Transactions/ITransactionService.cs" />
-        <option value="$PROJECT_DIR$/Application/Services/Transactions/TransactionService.cs" />
         <option value="$PROJECT_DIR$/Application/Repositories/ITransactionRepository.cs" />
         <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Transactions/TransactionSqlServer.cs" />
+        <option value="$PROJECT_DIR$/WebAPI/Controllers/TransactionController.cs" />
+        <option value="$PROJECT_DIR$/Domain/Transactions/Transaction.cs" />
+        <option value="$PROJECT_DIR$/Application/Services/Transactions/TransactionService.cs" />
         <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Transactions/TransactionRepository.cs" />
       </list>
     </option>
@@ -261,6 +257,14 @@
       <workItem from="1605877995302" duration="129000" />
       <workItem from="1605917205743" duration="11846000" />
       <workItem from="1605972540634" duration="13434000" />
+      <workItem from="1606046878946" duration="625000" />
+      <workItem from="1606068629447" duration="667000" />
+      <workItem from="1606134087199" duration="8073000" />
+      <workItem from="1606165270896" duration="604000" />
+      <workItem from="1606834493783" duration="1125000" />
+      <workItem from="1606915800708" duration="3582000" />
+      <workItem from="1606994939270" duration="708000" />
+      <workItem from="1607434281945" duration="601000" />
     </task>
     <servers />
   </component>
@@ -286,26 +290,26 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1877" height="347" key="GridCell.Tab.0.bottom" timestamp="1606017652760">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="121" key="GridCell.Tab.0.bottom" timestamp="1607000791177">
+      <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="914" height="349" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1605273420745" />
-    <state width="1877" height="347" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1606017652760" />
-    <state width="1877" height="347" key="GridCell.Tab.0.center" timestamp="1606017652760">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="121" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1607000791177" />
+    <state width="1877" height="347" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1606837601507" />
+    <state width="1877" height="121" key="GridCell.Tab.0.center" timestamp="1607000791177">
+      <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="914" height="349" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1605273420745" />
-    <state width="1877" height="347" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1606017652760" />
-    <state width="1877" height="347" key="GridCell.Tab.0.left" timestamp="1606017652760">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="121" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1607000791177" />
+    <state width="1877" height="347" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1606837601507" />
+    <state width="1877" height="121" key="GridCell.Tab.0.left" timestamp="1607000791177">
+      <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="914" height="349" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1605273420744" />
-    <state width="1877" height="347" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1606017652760" />
-    <state width="1877" height="347" key="GridCell.Tab.0.right" timestamp="1606017652760">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="121" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1607000791177" />
+    <state width="1877" height="347" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1606837601507" />
+    <state width="1877" height="121" key="GridCell.Tab.0.right" timestamp="1607000791177">
+      <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="914" height="349" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1605273420745" />
-    <state width="1877" height="347" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1606017652760" />
+    <state width="1877" height="121" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1607000791177" />
+    <state width="1877" height="347" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1606837601507" />
     <state x="552" y="252" key="Rider.ProjectTemplateDialog.Size" timestamp="1605272940990">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
