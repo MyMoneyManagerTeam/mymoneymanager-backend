@@ -33,7 +33,7 @@ namespace MyMoneyManagerBackend.Controllers
             return Ok(response);
         }
 
-        [HttpPost]
+        [HttpPut]
         [Authorize(Roles = "admin")]
         [Route("[action]")]
         public ActionResult<bool> ModifyBalance([FromBody] InputDtoModifyBalanceAccount inputDtoModifyBalanceAccount)
