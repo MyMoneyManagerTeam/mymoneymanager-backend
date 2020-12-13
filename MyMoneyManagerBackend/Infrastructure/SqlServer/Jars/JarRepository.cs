@@ -61,7 +61,7 @@ namespace Infrastructure.SqlServer.Jars
                 conn.Open();
                 var cmd = conn.CreateCommand();
                 cmd.CommandText = JarSqlServer.ReqCreate;
-                cmd.Parameters.AddWithValue($"@{JarSqlServer.ColumnOwner}",jar.Owner);
+                cmd.Parameters.AddWithValue($"@{JarSqlServer.ColumnOwner}",jar.Owner.Id);
                 cmd.Parameters.AddWithValue($"@{JarSqlServer.ColumnDescription}",jar.Description);
                 cmd.Parameters.AddWithValue($"@{JarSqlServer.ColumnBalance}",jar.Balance);
                 cmd.Parameters.AddWithValue($"@{JarSqlServer.ColumnMax}",jar.Max);
@@ -81,7 +81,7 @@ namespace Infrastructure.SqlServer.Jars
                 var cmd = conn.CreateCommand();
                 cmd.CommandText = JarSqlServer.ReqPut;
                 cmd.Parameters.AddWithValue($"@{JarSqlServer.ColumnId}", jarId);
-                cmd.Parameters.AddWithValue($"@{JarSqlServer.ColumnOwner}",jar.Owner);
+                cmd.Parameters.AddWithValue($"@{JarSqlServer.ColumnOwner}",jar.Owner.Id);
                 cmd.Parameters.AddWithValue($"@{JarSqlServer.ColumnDescription}",jar.Description);
                 cmd.Parameters.AddWithValue($"@{JarSqlServer.ColumnBalance}",jar.Balance);
                 cmd.Parameters.AddWithValue($"@{JarSqlServer.ColumnName}",jar.Name);

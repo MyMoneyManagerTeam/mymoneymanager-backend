@@ -1,22 +1,23 @@
 ﻿using System;
 using System.Data.SqlClient;
 using Domain.Transactions;
+using Domain.Users;
 
 namespace Domain.Transactions
 {
     public class TransactionFactory: ITransactionFactory
     {
-        public ITransaction CreateFromParam(Guid emitterId, Guid receiverId, double amount, DateTime transactionDate,
+        public ITransaction CreateFromParam(User emitter, User receiver, double amount, DateTime transactionDate,
             string description, string emitterName, string receiverName)
         {
             return new Transaction
             {
-                EmitterId = emitterId,
-                ReceiverId = receiverId,
+                Emitter = emitter,
+                Receiver = receiver,
                 Amount = amount,
                 Description = description,
-                EmitterName = emitterName,
-                ReceiverName = receiverName,
+                EmitterNameCustom = emitterName,
+                ReceiverNameCustom = receiverName,
                 TransactionDate = transactionDate
             };
         }

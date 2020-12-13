@@ -25,15 +25,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2a471809-f355-4591-a512-e5f8f5a49a17" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Application/Exceptions/NotEnoughMoneyException.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MyMoneyManagerBackend/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyMoneyManagerBackend/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MyMoneyManagerBackend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyMoneyManagerBackend/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Repositories/ITransactionRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Repositories/ITransactionRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Services/Transactions/ITransactionService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Services/Transactions/ITransactionService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/Application.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Application.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/Services/Jars/JarService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Services/Jars/JarService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Application/Services/Transactions/TransactionService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Services/Transactions/TransactionService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Domain.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Domain.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Jars/IJar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Jars/IJar.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Jars/IJarFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Jars/IJarFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Jars/Jar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Jars/Jar.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Jars/JarFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Jars/JarFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Transactions/ITransaction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Transactions/ITransaction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Transactions/ITransactionFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Transactions/ITransactionFactory.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Domain/Transactions/Transaction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Transactions/Transaction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Transactions/TransactionFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Transactions/TransactionFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/Infrastructure.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Infrastructure.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/SqlServer/Factories/JarFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/SqlServer/Factories/JarFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/SqlServer/Factories/TransactionFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/SqlServer/Factories/TransactionFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/SqlServer/Jars/JarRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/SqlServer/Jars/JarRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Infrastructure/SqlServer/Transactions/TransactionRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/SqlServer/Transactions/TransactionRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Infrastructure/SqlServer/Transactions/TransactionSqlServer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/SqlServer/Transactions/TransactionSqlServer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebAPI/Controllers/AuthController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Controllers/AuthController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/obj/project.packagespec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebAPI/Controllers/TransactionController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Controllers/TransactionController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAPI/WebAPI.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/WebAPI.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAPI/obj/Debug/netcoreapp3.1/WebAPI.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/obj/Debug/netcoreapp3.1/WebAPI.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAPI/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAPI/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAPI/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAPI/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,16 +71,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Application/Services/Accounts/Dto/InputDtoUpdateAccount.cs" />
-        <option value="$PROJECT_DIR$/Application/Services/Accounts/Dto/OutputDtoCreateAccount.cs" />
-        <option value="$PROJECT_DIR$/Application/Services/Jars/Dto/OutputDtoQueryJar.cs" />
-        <option value="$PROJECT_DIR$/Application/Services/Jars/Dto/OutputDtoDeleteJar.cs" />
-        <option value="$PROJECT_DIR$/Application/Services/Jars/Dto/OutputDtoCreateJar.cs" />
-        <option value="$PROJECT_DIR$/Domain/Jars/IJarFactory.cs" />
-        <option value="$PROJECT_DIR$/Domain/Jars/JarFactory.cs" />
-        <option value="$PROJECT_DIR$/Application/Services/Jars/Dto/InputDtoUpdateJar.cs" />
-        <option value="$PROJECT_DIR$/Application/Services/Jars/Dto/InputDtoCreateJar.cs" />
-        <option value="$PROJECT_DIR$/Application/Services/Jars/IJarService.cs" />
         <option value="$PROJECT_DIR$/Application/Services/Accounts/Dto/OutputDtoGetAccount.cs" />
         <option value="$PROJECT_DIR$/Application/Services/Transactions/Dto/OutputDtoQueryTransaction.cs" />
         <option value="$PROJECT_DIR$/Application/Services/Transactions/Dto/InputDtoCreateTransaction.cs" />
@@ -88,19 +99,29 @@
         <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Auth/UserRepository.cs" />
         <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Auth/UserSqlServer.cs" />
         <option value="$PROJECT_DIR$/WebAPI/Controllers/JarController.cs" />
-        <option value="$PROJECT_DIR$/Application/Services/Jars/JarService.cs" />
         <option value="$PROJECT_DIR$/Application/Repositories/IJarRepository.cs" />
         <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Jars/JarSqlServer.cs" />
-        <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Jars/JarRepository.cs" />
-        <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Factories/TransactionFactory.cs" />
         <option value="$PROJECT_DIR$/WebAPI/Controllers/AuthController.cs" />
         <option value="$PROJECT_DIR$/Application/Services/Transactions/ITransactionService.cs" />
         <option value="$PROJECT_DIR$/Application/Repositories/ITransactionRepository.cs" />
-        <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Transactions/TransactionSqlServer.cs" />
-        <option value="$PROJECT_DIR$/WebAPI/Controllers/TransactionController.cs" />
+        <option value="$PROJECT_DIR$/Domain/Accounts/Account.cs" />
+        <option value="$PROJECT_DIR$/Domain/Jars/IJar.cs" />
+        <option value="$PROJECT_DIR$/Domain/Jars/Jar.cs" />
+        <option value="$PROJECT_DIR$/Domain/Jars/JarFactory.cs" />
+        <option value="$PROJECT_DIR$/Domain/Jars/IJarFactory.cs" />
+        <option value="$PROJECT_DIR$/Application/Services/Jars/JarService.cs" />
+        <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Factories/JarFactory.cs" />
+        <option value="$PROJECT_DIR$/Domain/Transactions/ITransaction.cs" />
         <option value="$PROJECT_DIR$/Domain/Transactions/Transaction.cs" />
-        <option value="$PROJECT_DIR$/Application/Services/Transactions/TransactionService.cs" />
+        <option value="$PROJECT_DIR$/Domain/Transactions/TransactionFactory.cs" />
+        <option value="$PROJECT_DIR$/Domain/Transactions/ITransactionFactory.cs" />
         <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Transactions/TransactionRepository.cs" />
+        <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Factories/TransactionFactory.cs" />
+        <option value="$PROJECT_DIR$/Application/Exceptions/NotEnoughMoneyException.cs" />
+        <option value="$PROJECT_DIR$/WebAPI/Controllers/TransactionController.cs" />
+        <option value="$PROJECT_DIR$/Application/Services/Transactions/TransactionService.cs" />
+        <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Jars/JarRepository.cs" />
+        <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Transactions/TransactionSqlServer.cs" />
       </list>
     </option>
   </component>
@@ -265,6 +286,8 @@
       <workItem from="1606915800708" duration="3582000" />
       <workItem from="1606994939270" duration="708000" />
       <workItem from="1607434281945" duration="601000" />
+      <workItem from="1607468836673" duration="299000" />
+      <workItem from="1607870173906" duration="5669000" />
     </task>
     <servers />
   </component>
@@ -290,35 +313,35 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1877" height="121" key="GridCell.Tab.0.bottom" timestamp="1607000791177">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state width="1877" height="461" key="GridCell.Tab.0.bottom" timestamp="1607878051229">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="121" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1607000791177" />
-    <state width="1877" height="347" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1606837601507" />
-    <state width="1877" height="121" key="GridCell.Tab.0.center" timestamp="1607000791177">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state width="1877" height="121" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1607469135258" />
+    <state width="1877" height="461" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1607878051229" />
+    <state width="1877" height="461" key="GridCell.Tab.0.center" timestamp="1607878051229">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="121" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1607000791177" />
-    <state width="1877" height="347" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1606837601507" />
-    <state width="1877" height="121" key="GridCell.Tab.0.left" timestamp="1607000791177">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state width="1877" height="121" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1607469135258" />
+    <state width="1877" height="461" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1607878051229" />
+    <state width="1877" height="461" key="GridCell.Tab.0.left" timestamp="1607878051229">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="121" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1607000791177" />
-    <state width="1877" height="347" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1606837601507" />
-    <state width="1877" height="121" key="GridCell.Tab.0.right" timestamp="1607000791177">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state width="1877" height="121" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1607469135258" />
+    <state width="1877" height="461" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1607878051229" />
+    <state width="1877" height="461" key="GridCell.Tab.0.right" timestamp="1607878051229">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="121" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1607000791177" />
-    <state width="1877" height="347" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1606837601507" />
+    <state width="1877" height="121" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1607469135258" />
+    <state width="1877" height="461" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1607878051229" />
     <state x="552" y="252" key="Rider.ProjectTemplateDialog.Size" timestamp="1605272940990">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1368" y="252" key="Rider.ProjectTemplateDialog.Size/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1604995994871" />
     <state x="552" y="252" key="Rider.ProjectTemplateDialog.Size/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1605272940990" />
-    <state x="1268" y="209" key="RiderGenerateDialog" timestamp="1605803743015">
+    <state x="1268" y="209" key="RiderGenerateDialog" timestamp="1607872082073">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1268" y="209" key="RiderGenerateDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1605803743015" />
+    <state x="1268" y="209" key="RiderGenerateDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1607872082073" />
     <state x="461" y="165" key="SettingsEditor" timestamp="1605203313902">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

@@ -1,4 +1,5 @@
 ﻿using System;
+using Domain.Users;
 
 namespace Domain.Jars
 {
@@ -9,7 +10,7 @@ namespace Domain.Jars
         }
 
         public Guid Id { get; set; }
-        public Guid Owner { get; set; }
+        public User Owner { get; set; }
         public string Description { get; set; }
         public string Name { get; set; }
         public double Max { get; set; }

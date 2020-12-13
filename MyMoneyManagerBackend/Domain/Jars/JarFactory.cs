@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Data.SqlClient;
 using Domain.Jars;
+using Domain.Users;
 
 namespace Domain.Jars
 {
     public class JarFactory: IJarFactory
     {
-        public IJar GetFromParam(Guid owner, string description, string name, double max, double balance)
+        public IJar GetFromParam(User owner, string description, string name, double max, double balance)
         {
             return new Jar
             {

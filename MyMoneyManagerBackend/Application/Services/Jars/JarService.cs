@@ -4,6 +4,7 @@ using System.Linq;
 using Application.Repositories;
 using Application.Services.Jars.Dto;
 using Domain.Jars;
+using Domain.Users;
 
 namespace Application.Services.Jars
 {
@@ -24,7 +25,7 @@ namespace Application.Services.Jars
                 .Select(jar => new OutputDtoQueryJar
                 {
                     Id = jar.Id,
-                    Owner = jar.Owner,
+                    Owner = jar.Owner.Id,
                     Balance = jar.Balance,
                     Description = jar.Description,
                     Max = jar.Max,
@@ -40,7 +41,7 @@ namespace Application.Services.Jars
                 Balance = res.Balance,
                 Description = res.Description,
                 Id = res.Id,
-                Owner = res.Owner,
+                Owner = res.Owner.Id,
                 Max = res.Max,
                 Name = res.Name
             };
@@ -48,7 +49,7 @@ namespace Application.Services.Jars
 
         public OutputDtoCreateJar Create(Guid userId,InputDtoCreateJar jar)
         {
-            var jarFromDto = _jarFactory.GetFromParam(userId, jar.Description, jar.Name, jar.Max, jar.Balance);
+            var jarFromDto = _jarFactory.GetFromParam(new User {Id = userId}, jar.Description, jar.Name, jar.Max, jar.Balance);
             var jarInDb = _jarRepository.Create(jarFromDto);
             if (jarInDb == null)
                 return null;
@@ -59,13 +60,13 @@ namespace Application.Services.Jars
                 Description = jarInDb.Description,
                 Max = jarInDb.Max,
                 Name = jarInDb.Name,
-                Owner = jarInDb.Owner
+                Owner = jarInDb.Owner.Id
             };
         }
 
         public bool Update(Guid userId, InputDtoUpdateJar jar)
         {
-            var jarFromDto = _jarFactory.GetFromParam(userId, jar.Description, jar.Name, jar.Max, jar.Balance);
+            var jarFromDto = _jarFactory.GetFromParam(new User {Id = userId}, jar.Description, jar.Name, jar.Max, jar.Balance);
             return _jarRepository.Update(jar.Id, jarFromDto);
         }
 

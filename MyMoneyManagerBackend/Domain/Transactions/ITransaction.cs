@@ -1,16 +1,17 @@
 ﻿using System;
 using Domain.Shared;
+using Domain.Users;
 
 namespace Domain.Transactions
 {
     public interface ITransaction: IEntity
     {
-        Guid EmitterId { get; set; }
-        Guid ReceiverId { get; set; }
+        User Emitter { get; set; }
+        User Receiver { get; set; }
         double Amount { get; set; }
         DateTime TransactionDate { get; set; }
         string Description { get; set; }
-        string EmitterName { get; set; }
-        string ReceiverName { get; set; }
+        string EmitterNameCustom { get; set; }
+        string ReceiverNameCustom { get; set; }
     }
 }

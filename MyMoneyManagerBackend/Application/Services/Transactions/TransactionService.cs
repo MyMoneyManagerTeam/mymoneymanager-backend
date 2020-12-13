@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Application.Exceptions;
 using Application.Repositories;
 using Application.Services.Transactions.Dto;
 using Domain.Jars;
 using Domain.Transactions;
+using Domain.Users;
 
 namespace Application.Services.Transactions
 {
@@ -31,27 +33,22 @@ namespace Application.Services.Transactions
                     Amount = transaction.Amount,
                     Description = transaction.Description,
                     Id = transaction.Id,
-                    EmitterId = transaction.EmitterId,
-                    EmitterName = transaction.EmitterName,
-                    ReceiverId = transaction.ReceiverId,
-                    ReceiverName = transaction.ReceiverName,
+                    EmitterId = transaction.Emitter.Id,
+                    EmitterName = transaction.EmitterNameCustom,
+                    ReceiverId = transaction.Receiver.Id,
+                    ReceiverName = transaction.ReceiverNameCustom,
                     TransactionDate = transaction.TransactionDate
                 });
         }
 
-        public OutputDtoCreateTransaction Create(Guid userId, InputDtoCreateTransaction transaction)
+        public OutputDtoCreateTransaction Create(Guid userId, InputDtoCreateTransaction transaction) 
         {
-            if (userId != transaction.EmitterId)//deplacer dans un validateur du controller
-            {
-                return null;
-            }
-
             if (transaction.Amount>(_accountRepository.Get(userId).Balance-_jarRepository.TotalBalanceByUserId(userId)))
             {
                 //serait cool de throw une erreur solde insuffisant (custom exception)
-                return null;
+                throw new NotEnoughMoneyException("Votre solde est insuffisant");
             }
-            var transactionFromDto = _transactionFactory.CreateFromParam(transaction.EmitterId, transaction.ReceiverId,
+            var transactionFromDto = _transactionFactory.CreateFromParam(new User{ Id= transaction.EmitterId}, new User{Id = transaction.ReceiverId},
                 transaction.Amount, DateTime.Now, transaction.Description, transaction.EmitterName,
                 transaction.ReceiverName);
             var transactionInDb = _transactionRepository.Create(transactionFromDto);
@@ -61,18 +58,18 @@ namespace Application.Services.Transactions
             }
             else //si l'ajout est correct on passe ici
             {
-                _accountRepository.ModifyBalance(transactionInDb.EmitterId, -transactionInDb.Amount);
-                _accountRepository.ModifyBalance(transactionInDb.ReceiverId, transactionInDb.Amount);
+                _accountRepository.ModifyBalance(transactionInDb.Emitter.Id, -transactionInDb.Amount);
+                _accountRepository.ModifyBalance(transactionInDb.Receiver.Id, transactionInDb.Amount);
             }
             return new OutputDtoCreateTransaction
             {
                 Amount = transactionInDb.Amount,
                 Description = transactionInDb.Description,
                 Id = transactionInDb.Id,
-                EmitterId = transactionInDb.EmitterId,
-                EmitterName = transactionInDb.EmitterName,
-                ReceiverId = transactionInDb.ReceiverId,
-                ReceiverName = transactionInDb.ReceiverName,
+                EmitterId = transactionInDb.Emitter.Id,
+                EmitterName = transactionInDb.EmitterNameCustom,
+                ReceiverId = transactionInDb.Receiver.Id,
+                ReceiverName = transactionInDb.ReceiverNameCustom,
                 TransactionDate = transactionInDb.TransactionDate
             }; 
         }

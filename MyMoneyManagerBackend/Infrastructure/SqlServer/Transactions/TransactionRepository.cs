@@ -63,13 +63,13 @@ namespace Infrastructure.SqlServer.Transactions
                 connection.Open();
                 var command = connection.CreateCommand();
                 command.CommandText = TransactionSqlServer.ReqCreate;
-                command.Parameters.AddWithValue($"@{TransactionSqlServer.ColumnEmitterId}",transaction.EmitterId);
-                command.Parameters.AddWithValue($"@{TransactionSqlServer.ColumnReceiverId}",transaction.ReceiverId);
+                command.Parameters.AddWithValue($"@{TransactionSqlServer.ColumnEmitterId}",transaction.Emitter.Id);
+                command.Parameters.AddWithValue($"@{TransactionSqlServer.ColumnReceiverId}",transaction.Receiver.Id);
                 command.Parameters.AddWithValue($"@{TransactionSqlServer.ColumnAmount}",transaction.Amount);
                 command.Parameters.AddWithValue($"@{TransactionSqlServer.ColumnTransactionDate}",transaction.TransactionDate);
                 command.Parameters.AddWithValue($"@{TransactionSqlServer.ColumnDescription}",transaction.Description);
-                command.Parameters.AddWithValue($"@{TransactionSqlServer.ColumnEmitterName}",transaction.EmitterName);
-                command.Parameters.AddWithValue($"@{TransactionSqlServer.ColumnReceiverName}",transaction.ReceiverName);
+                command.Parameters.AddWithValue($"@{TransactionSqlServer.ColumnEmitterName}",transaction.EmitterNameCustom);
+                command.Parameters.AddWithValue($"@{TransactionSqlServer.ColumnReceiverName}",transaction.ReceiverNameCustom);
                 transaction.Id = (Guid) command.ExecuteScalar();
             }
             return transaction;

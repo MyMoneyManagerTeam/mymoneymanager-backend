@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
+using Application.Exceptions;
 using Application.Services.Transactions;
 using Application.Services.Transactions.Dto;
 using Microsoft.AspNetCore.Authorization;
@@ -46,12 +47,27 @@ namespace MyMoneyManagerBackend.Controllers
         [Route("[action]")]
         public ActionResult<OutputDtoCreateTransaction> Create([FromBody] InputDtoCreateTransaction inputDtoCreateTransaction)
         {
-            var response = _transactionService.Create(new Guid(User.FindFirst(ClaimTypes.NameIdentifier)?.Value),inputDtoCreateTransaction);
-            if (response == null)
+            Guid guid = new Guid(User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
+            if (guid != inputDtoCreateTransaction.EmitterId)
             {
-                return BadRequest(new {message = "Impossible de créer une nouvelle transaction"});
+                return BadRequest(new {message = "Vous n'êtes pas l'emmiter de la transaction"});
             }
-            return Ok(response);
+            try
+            {
+                var response = _transactionService.Create(guid,
+                    inputDtoCreateTransaction);
+
+                if (response == null)
+                {
+                    return BadRequest(new {message = "Impossible de créer une nouvelle transaction"});
+                }
+
+                return Ok(response);
+            }
+            catch (NotEnoughMoneyException e)
+            {
+                return BadRequest(e.Message);
+            }
         }
     }
 }

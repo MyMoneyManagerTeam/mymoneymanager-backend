@@ -22,7 +22,7 @@
         ";
 
         public static readonly string ReqQueryOrder = $@"
-             ORDER BY {ColumnTransactionDate} 
+             ORDER BY {ColumnTransactionDate} DESC 
         ";
         public static readonly string ReqQueryOffset = $@"
              OFFSET @offset ROWS  
