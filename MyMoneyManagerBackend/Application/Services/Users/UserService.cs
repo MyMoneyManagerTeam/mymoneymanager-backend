@@ -93,5 +93,15 @@ namespace Application.Services.Users
                 }
                 );
         }
+
+        public bool Update(InputDtoUpdatePrivileges inputDtoUpdatePrivileges)
+        {
+            return _userRepository.Update(new User
+            {
+                Id = inputDtoUpdatePrivileges.Id,
+                Admin = inputDtoUpdatePrivileges.Admin,
+                Confirmed = inputDtoUpdatePrivileges.Confirmed
+            });
+        }
     }
 }

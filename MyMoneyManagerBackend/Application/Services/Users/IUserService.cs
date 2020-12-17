@@ -11,5 +11,6 @@ namespace Application.Services.Users
         OutputDtoSignin Signin(InputDtoSignin inputDtoSignin);
         bool UploadImage(Guid userId,IFormFile image);
         IEnumerable<OutputDtoQueryUser> Query();
+        bool Update(InputDtoUpdatePrivileges inputDtoUpdatePrivileges);
     }
 }

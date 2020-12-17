@@ -64,9 +64,9 @@ namespace MyMoneyManagerBackend.Controllers
 
                 return Ok(response);
             }
-            catch (NotEnoughMoneyException e)
+            catch (Exception e)
             {
-                return BadRequest(e.Message);
+                return BadRequest(new{message = e.Message});
             }
         }
     }

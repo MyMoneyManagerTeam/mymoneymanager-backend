@@ -43,6 +43,10 @@ namespace Application.Services.Transactions
 
         public OutputDtoCreateTransaction Create(Guid userId, InputDtoCreateTransaction transaction) 
         {
+            if (transaction.Amount<=0)
+            {
+                throw new NegativeTransactionException("Transaction négative impossible");
+            }
             if (transaction.Amount>(_accountRepository.Get(userId).Balance-_jarRepository.TotalBalanceByUserId(userId)))
             {
                 //serait cool de throw une erreur solde insuffisant (custom exception)

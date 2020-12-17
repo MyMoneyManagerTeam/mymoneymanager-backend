@@ -88,9 +88,18 @@ namespace Infrastructure.SqlServer.Auth
             return user;
         }
 
-        public bool Update(int id, IUser user)
+        public bool Update(IUser user)
         {
-            throw new System.NotImplementedException();
+            using (var connection = Database.GetConnection())
+            {
+                connection.Open();
+                var command = connection.CreateCommand();
+                command.CommandText = UserSqlServer.ReqUpdate;
+                command.Parameters.AddWithValue($"@{UserSqlServer.ColumnId}", user.Id);
+                command.Parameters.AddWithValue($"@{UserSqlServer.ColumnAdmin}", user.Admin);
+                command.Parameters.AddWithValue($"@{UserSqlServer.ColumnConfirmed}", user.Confirmed);
+                return command.ExecuteNonQuery() > 0;
+            }
         }
 
         public bool Delete(int id)

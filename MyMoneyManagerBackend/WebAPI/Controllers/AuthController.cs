@@ -130,5 +130,13 @@ namespace MyMoneyManagerBackend.Controllers
         {
             return Ok(_userService.Query());
         }
+
+        [HttpPut]
+        [Authorize(Roles = "admin")]
+        [Route("[action]")]
+        public ActionResult<bool> UpdatePrivileges([FromBody] InputDtoUpdatePrivileges inputDtoUpdatePrivileges)
+        {
+            return Ok(_userService.Update(inputDtoUpdatePrivileges));
+        }
     }
 }

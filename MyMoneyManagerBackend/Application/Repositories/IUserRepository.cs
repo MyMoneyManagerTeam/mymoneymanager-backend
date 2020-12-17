@@ -10,7 +10,7 @@ namespace Application.Repositories
         IEnumerable<IUser> Query();
         IUser Get(string mail, string password);
         IUser Create(IUser user);
-        bool Update(int id, IUser user);
+        bool Update(IUser user);
         bool Delete(int id);
         bool UploadImage(Guid userId, IFormFile image);
     }

@@ -17,7 +17,7 @@
 
         public static readonly string ReqModifyBalance = 
             $@"UPDATE {TableName} SET {ColumnBalance}=CASE WHEN {ColumnBalance} IS NULL OR {ColumnBalance}=0 THEN @{ColumnBalance}  
-            ELSE {ColumnBalance}+@{ColumnBalance} END WHERE {ColumnId}=@{ColumnId}  
+            ELSE @{ColumnBalance} END WHERE {ColumnId}=@{ColumnId}  
             ";
     }
 }

@@ -42,5 +42,10 @@
             {ColumnPicture} = @{ColumnPicture}
             WHERE {ColumnId} = @{ColumnId}
         ";
+
+        public static readonly string ReqUpdate = $@"UPDATE {TableName} SET 
+            {ColumnAdmin} = @{ColumnAdmin}, 
+            {ColumnConfirmed} = @{ColumnConfirmed} 
+            WHERE {ColumnId} = @{ColumnId}";
     }
 }
