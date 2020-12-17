@@ -112,15 +112,23 @@ namespace MyMoneyManagerBackend.Controllers
                                      $" vous êtes {User.FindFirst(ClaimTypes.Name)?.Value} et votre id" +
                                      $" est {User.FindFirst(ClaimTypes.NameIdentifier)?.Value}"});
         }
+        
         [HttpGet]
         [Authorize]
         [Route("tokentestlambda")]
-        
         public ActionResult TokenTest()
         {
             return Ok(new {message = "Votre JWT a bien été validé," +
                                      $" vous êtes {User.FindFirst(ClaimTypes.Name)?.Value} et votre id" +
                                      $" est {User.FindFirst(ClaimTypes.NameIdentifier)?.Value}"});
+        }
+
+        [HttpGet]
+        [Authorize(Roles = "admin")]
+        [Route("[action]")]
+        public ActionResult<OutputDtoQueryUser> Query()
+        {
+            return Ok(_userService.Query());
         }
     }
 }

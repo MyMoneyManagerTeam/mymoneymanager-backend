@@ -3,6 +3,9 @@
     public static class UserSqlServer
     {
         public static readonly string TableName = "users";
+        public static readonly string JoinTableName = "accounts";
+        public static readonly string JoinTableAccountIdArgument = "account_id";
+        public static readonly string JoinTableBalanceArgument = "balance";
         public static readonly string ColumnId = "user_id";
         public static readonly string ColumnMail = "mail";
         public static readonly string ColumnPassword = "password";
@@ -17,6 +20,10 @@
         public static readonly string ColumnAdmin = "admin";
         public static readonly string ColumnPicture = "picture";
 
+        public static readonly string ReqQuery =
+            $@"SELECT * FROM {TableName} INNER JOIN {JoinTableName} ON {TableName}.{ColumnId} = {JoinTableAccountIdArgument};
+        ";
+        
         public static readonly string ReqGet =
             $@"SELECT * FROM {TableName} WHERE {ColumnMail}=@{ColumnMail} AND {ColumnPassword}=@{ColumnPassword}
         ";

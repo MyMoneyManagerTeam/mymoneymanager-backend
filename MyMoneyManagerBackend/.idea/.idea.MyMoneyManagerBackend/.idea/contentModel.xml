@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\lopez\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\lopez\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_MyMoneyManagerBackend.1672478746.00" t="ExcludeRecursive" />
-    <e p="C:\Users\lopez\Documents\GitHub\mymoneymanager-backend\MyMoneyManagerBackend" t="IncludeFlat">
+    <e p="C:\Users\Alexi\.nuget\packages\microsoft.net.test.sdk\16.5.0\build\netcoreapp2.1" t="Include">
+      <e p="Microsoft.NET.Test.Sdk.Program.cs" t="Include" />
+    </e>
+    <e p="C:\Users\Alexi\.nuget\packages\microsoft.testplatform.testhost\16.5.0\build\netcoreapp2.1\x64\testhost.dll" t="Include" />
+    <e p="C:\Users\Alexi\.nuget\packages\microsoft.testplatform.testhost\16.5.0\build\netcoreapp2.1\x64\testhost.exe" t="Include" />
+    <e p="C:\Users\Alexi\.nuget\packages\nunit3testadapter\3.16.1\build\netcoreapp2.1\nunit.engine.api.dll" t="Include" />
+    <e p="C:\Users\Alexi\.nuget\packages\nunit3testadapter\3.16.1\build\netcoreapp2.1\nunit.engine.dll" t="Include" />
+    <e p="C:\Users\Alexi\.nuget\packages\nunit3testadapter\3.16.1\build\netcoreapp2.1\NUnit3.TestAdapter.dll" t="Include" />
+    <e p="C:\Users\Alexi\.nuget\packages\nunit3testadapter\3.16.1\build\netcoreapp2.1\NUnit3.TestAdapter.pdb" t="Include" />
+    <e p="C:\Users\Alexi\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Alexi\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_MyMoneyManagerBackend.1226905783.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Alexi\OneDrive\Bureau\projWebMob\mymoneymanager-backend\MyMoneyManagerBackend" t="IncludeFlat">
       <e p="Application" t="IncludeRecursive">
         <e p="Application.csproj" t="IncludeRecursive" />
         <e p="bin" t="ExcludeRecursive" />
@@ -60,6 +69,7 @@
               <e p="InputDtoSignin.cs" t="Include" />
               <e p="IOutputDtoAuthSign.cs" t="Include" />
               <e p="OutputDtoAuth.cs" t="Include" />
+              <e p="OutputDtoQueryUser.cs" t="Include" />
               <e p="OutputDtoSignin.cs" t="Include" />
             </e>
             <e p="IUserService.cs" t="Include" />
@@ -144,6 +154,18 @@
       </e>
       <e p="MyMoneyManagerBackend.sln" t="IncludeFlat" />
       <e p="packages" t="ExcludeRecursive" />
+      <e p="UnitTest" t="IncludeRecursive">
+        <e p="AccountDtoTest.cs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="UnitTest.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="UnitTest.csproj" t="IncludeRecursive" />
+      </e>
       <e p="WebAPI" t="IncludeRecursive">
         <e p="appsettings.Development.json" t="Include" />
         <e p="appsettings.json" t="Include" />

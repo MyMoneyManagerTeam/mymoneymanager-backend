@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using Application.Repositories;
 using Application.Services.Accounts;
 using Application.Services.Users.Dto;
@@ -68,6 +70,28 @@ namespace Application.Services.Users
         public bool UploadImage(Guid userId, IFormFile image)
         {
             return _userRepository.UploadImage(userId, image);
+        }
+
+        public IEnumerable<OutputDtoQueryUser> Query()
+        {
+            return _userRepository
+                .Query()
+                .Select(user=> new OutputDtoQueryUser
+                {
+                    Address = user.Address,
+                    Admin = user.Admin,
+                    Area = user.Area,
+                    City = user.City,
+                    Confirmed = user.Confirmed,
+                    Country = user.Country,
+                    Id = user.Id,
+                    Mail = user.Mail,
+                    Zip = user.Zip,
+                    FirstName = user.FirstName,
+                    LastName = user.LastName,
+                    Balance = user.Account.Balance
+                }
+                );
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Application.Services.Accounts.Dto;
 
 namespace Application.Services.Accounts
@@ -9,5 +10,6 @@ namespace Application.Services.Accounts
         OutputDtoCreateAccount Create(Guid userId);
         bool Update(Guid userId, InputDtoUpdateAccount account);
         bool ModifyBalance(Guid userId, double amount);
+        
     }
 }

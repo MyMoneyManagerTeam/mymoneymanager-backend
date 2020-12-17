@@ -1,7 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using Application.Repositories;
 using Application.Services.Accounts.Dto;
 using Application.Services.Jars;
+using Application.Services.Jars.Dto;
 using Application.Services.Users;
 using Domain.Accounts;
 
@@ -19,6 +22,7 @@ namespace Application.Services.Accounts
             _accountRepository = accountRepository;
             _jarRepository = jarRepository;
         }
+
         public OutputDtoGetAccount Get(Guid userId)
         {
             var accountInDb = _accountRepository.Get(userId);
@@ -59,5 +63,6 @@ namespace Application.Services.Accounts
         {
             return _accountRepository.ModifyBalance(userId, amount);
         }
+        
     }
 }

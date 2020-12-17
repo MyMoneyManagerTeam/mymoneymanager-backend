@@ -14,11 +14,6 @@ namespace Infrastructure.SqlServer.Accounts
     {
         private IInstanceFromReaderFactory<IAccount> _accountFactory = new AccountFactory();
 
-        public IEnumerable<IAccount> Query()
-        {
-            throw new NotImplementedException();
-        }
-
         public IAccount Get(Guid id)
         {
             IAccount res = null;

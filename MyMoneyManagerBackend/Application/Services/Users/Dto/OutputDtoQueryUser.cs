@@ -1,18 +1,11 @@
 ﻿using System;
-using System.Text.Json.Serialization;
-using Domain.Accounts;
 
-namespace Domain.Users
+namespace Application.Services.Users.Dto
 {
-    public class User: IUser
+    public class OutputDtoQueryUser
     {
-        public User()
-        {
-        }
-
         public Guid Id { get; set; }
         public string Mail { get; set; }
-        public string Password { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Country { get; set; }
@@ -20,12 +13,8 @@ namespace Domain.Users
         public string Address { get; set; }
         public int Zip { get; set; }
         public string City { get; set; }
-        public byte[] Picture { get; set; }
         public bool Confirmed { get; set; }
         public bool Admin { get; set; }
-        
-        public string Token { get; set; }
-        
-        public Account Account { get; set; }
+        public double Balance { get; set; }
     }
 }

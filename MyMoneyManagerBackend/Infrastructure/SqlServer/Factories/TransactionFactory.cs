@@ -22,5 +22,10 @@ namespace Infrastructure.SqlServer.Factories
                 ReceiverNameCustom = reader.GetString(reader.GetOrdinal(TransactionSqlServer.ColumnReceiverName))
             };
         }
+
+        public ITransaction CreateFromReaderWithAccount(SqlDataReader reader)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

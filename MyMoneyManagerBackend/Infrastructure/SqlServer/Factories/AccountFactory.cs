@@ -14,5 +14,10 @@ namespace Infrastructure.SqlServer.Factories
                 Balance = reader.GetDouble(reader.GetOrdinal(AccountSqlServer.ColumnBalance))
             };
         }
+
+        public IAccount CreateFromReaderWithAccount(SqlDataReader reader)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

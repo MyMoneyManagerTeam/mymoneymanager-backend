@@ -19,7 +19,20 @@ namespace Infrastructure.SqlServer.Auth
         
         public IEnumerable<IUser> Query()
         {
-            throw new System.NotImplementedException();
+            List<IUser> userList = new List<IUser>();
+            using (var connection = Database.GetConnection())
+            {
+                connection.Open();
+                var command = connection.CreateCommand();
+                command.CommandText = UserSqlServer.ReqQuery;
+                var reader = command.ExecuteReader(CommandBehavior.CloseConnection);
+                while (reader.Read())
+                {
+                    userList.Add(_userFactory.CreateFromReaderWithAccount(reader));
+                }
+            }
+
+            return userList;
         }
 
         public IUser Get(string mail, string password)

@@ -19,5 +19,10 @@ namespace Infrastructure.SqlServer.Factories
                 Balance =  reader.GetDouble(reader.GetOrdinal(JarSqlServer.ColumnBalance))
             };
         }
+
+        public IJar CreateFromReaderWithAccount(SqlDataReader reader)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
