@@ -7,7 +7,7 @@ namespace Domain.Jars
 {
     public interface IJarFactory
     {
-        public IJar GetFromParam(User owner, string description, string name, double max, double balance);
+        public IJar GetFromParam(User owner, Guid id, string description, string name, double max, double balance);
 
     }
 }

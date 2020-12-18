@@ -7,11 +7,12 @@ namespace Domain.Jars
 {
     public class JarFactory: IJarFactory
     {
-        public IJar GetFromParam(User owner, string description, string name, double max, double balance)
+        public IJar GetFromParam(User owner, Guid id, string description, string name, double max, double balance)
         {
             return new Jar
             {
                 Owner = owner,
+                Id = id,
                 Balance = balance,
                 Description = description,
                 Max = max,

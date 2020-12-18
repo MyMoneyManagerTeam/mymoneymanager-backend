@@ -25,19 +25,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2a471809-f355-4591-a512-e5f8f5a49a17" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Application/Exceptions/NegativeTransactionException.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Services/Users/Dto/InputDtoUpdatePrivileges.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnitTest/AccountServicesTest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnitTest/JarServicesTest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnitTest/TransactionServicesTest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnitTest/UserServicesTest.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MyMoneyManagerBackend/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyMoneyManagerBackend/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MyMoneyManagerBackend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyMoneyManagerBackend/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Repositories/IUserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Repositories/IUserRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Services/Transactions/TransactionService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Services/Transactions/TransactionService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Services/Users/IUserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Services/Users/IUserService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Services/Users/UserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Services/Users/UserService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Infrastructure/SqlServer/Accounts/AccountSqlServer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/SqlServer/Accounts/AccountSqlServer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Infrastructure/SqlServer/Auth/UserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/SqlServer/Auth/UserRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Infrastructure/SqlServer/Auth/UserSqlServer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/SqlServer/Auth/UserSqlServer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebAPI/Controllers/AuthController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Controllers/AuthController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebAPI/Controllers/TransactionController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Controllers/TransactionController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/Services/Accounts/Dto/InputDtoUpdateAccount.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Services/Accounts/Dto/InputDtoUpdateAccount.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/Services/Accounts/Dto/OutputDtoCreateAccount.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Services/Accounts/Dto/OutputDtoCreateAccount.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/Services/Accounts/Dto/OutputDtoGetAccount.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Services/Accounts/Dto/OutputDtoGetAccount.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/Services/Jars/Dto/OutputDtoCreateJar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Services/Jars/Dto/OutputDtoCreateJar.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/Services/Jars/Dto/OutputDtoQueryJar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Services/Jars/Dto/OutputDtoQueryJar.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/Services/Jars/JarService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Services/Jars/JarService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/Services/Users/Dto/OutputDtoAuth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Services/Users/Dto/OutputDtoAuth.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/Services/Users/Dto/OutputDtoSignin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Services/Users/Dto/OutputDtoSignin.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Accounts/Account.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Accounts/Account.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Jars/IJarFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Jars/IJarFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Jars/Jar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Jars/Jar.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Jars/JarFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Jars/JarFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Transactions/ITransaction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Transactions/ITransaction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Transactions/Transaction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Transactions/Transaction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Users/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Users/User.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UnitTest/AccountDtoTest.cs" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,30 +57,14 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/B6CD7678-39A9-4127-B059-4CB5685CB260/A/AuthorizeAttribute.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/UnitTest/AccountDtoTest.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/UnitTest/AccountServicesTest.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Application/Repositories/ITransactionRepository.cs" />
-        <option value="$PROJECT_DIR$/Domain/Accounts/Account.cs" />
-        <option value="$PROJECT_DIR$/Domain/Jars/IJar.cs" />
-        <option value="$PROJECT_DIR$/Domain/Jars/Jar.cs" />
-        <option value="$PROJECT_DIR$/Domain/Jars/JarFactory.cs" />
-        <option value="$PROJECT_DIR$/Domain/Jars/IJarFactory.cs" />
-        <option value="$PROJECT_DIR$/Application/Services/Jars/JarService.cs" />
-        <option value="$PROJECT_DIR$/Domain/Transactions/ITransaction.cs" />
-        <option value="$PROJECT_DIR$/Domain/Transactions/Transaction.cs" />
-        <option value="$PROJECT_DIR$/Domain/Transactions/TransactionFactory.cs" />
-        <option value="$PROJECT_DIR$/Domain/Transactions/ITransactionFactory.cs" />
-        <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Transactions/TransactionRepository.cs" />
-        <option value="$PROJECT_DIR$/Application/Exceptions/NotEnoughMoneyException.cs" />
-        <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Jars/JarRepository.cs" />
-        <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Transactions/TransactionSqlServer.cs" />
-        <option value="$PROJECT_DIR$/ClassLibrary1/Class1.cs" />
-        <option value="$PROJECT_DIR$/UnitTesting/MockedDataCreation/AccountCreateData.cs" />
-        <option value="$PROJECT_DIR$/UnitTesting/AccountRepositoryTest.cs" />
         <option value="$PROJECT_DIR$/TestProject1/MockedDataCreation/AccountCreateData.cs" />
         <option value="$PROJECT_DIR$/TestProject1/AccountRepositoryTest.cs" />
         <option value="$PROJECT_DIR$/TestProject1/UnitTest1.cs" />
@@ -79,13 +72,9 @@
         <option value="$PROJECT_DIR$/UnitTest/AccountRepositoryTest.cs" />
         <option value="$PROJECT_DIR$/UnitTest/DomainAccountTest.cs" />
         <option value="$PROJECT_DIR$/UnitTest/AccountServiceTest.cs" />
-        <option value="$PROJECT_DIR$/Application/Services/Accounts/Dto/OutputDtoGetAccount.cs" />
-        <option value="$PROJECT_DIR$/UnitTest/AccountDtoTest.cs" />
         <option value="$PROJECT_DIR$/WebAPI/Controllers/AccountController.cs" />
-        <option value="$PROJECT_DIR$/Application/Services/Accounts/AccountService.cs" />
         <option value="$PROJECT_DIR$/Application/Repositories/IAccountRepository.cs" />
         <option value="$PROJECT_DIR$/Domain/Users/IUser.cs" />
-        <option value="$PROJECT_DIR$/Domain/Users/User.cs" />
         <option value="$PROJECT_DIR$/Application/Services/Users/Dto/OutputDtoQueryUser.cs" />
         <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Accounts/AccountRepository.cs" />
         <option value="$PROJECT_DIR$/Application/Services/Accounts/IAccountService.cs" />
@@ -105,6 +94,28 @@
         <option value="$PROJECT_DIR$/Application/Exceptions/NegativeTransactionException.cs" />
         <option value="$PROJECT_DIR$/Application/Services/Transactions/TransactionService.cs" />
         <option value="$PROJECT_DIR$/WebAPI/Controllers/TransactionController.cs" />
+        <option value="$PROJECT_DIR$/Application/Services/Accounts/AccountService.cs" />
+        <option value="$PROJECT_DIR$/Domain/Accounts/Account.cs" />
+        <option value="$PROJECT_DIR$/UnitTest/AccountDtoTest.cs" />
+        <option value="$PROJECT_DIR$/Application/Services/Accounts/Dto/InputDtoUpdateAccount.cs" />
+        <option value="$PROJECT_DIR$/Application/Services/Accounts/Dto/OutputDtoCreateAccount.cs" />
+        <option value="$PROJECT_DIR$/Application/Services/Accounts/Dto/OutputDtoGetAccount.cs" />
+        <option value="$PROJECT_DIR$/UnitTest/AccountServicesTest.cs" />
+        <option value="$PROJECT_DIR$/Application/Services/Users/Dto/OutputDtoAuth.cs" />
+        <option value="$PROJECT_DIR$/Application/Services/Users/Dto/OutputDtoSignin.cs" />
+        <option value="$PROJECT_DIR$/Domain/Users/User.cs" />
+        <option value="$PROJECT_DIR$/Application/Services/Jars/Dto/OutputDtoQueryJar.cs" />
+        <option value="$PROJECT_DIR$/Application/Services/Jars/Dto/OutputDtoCreateJar.cs" />
+        <option value="$PROJECT_DIR$/Domain/Jars/Jar.cs" />
+        <option value="$PROJECT_DIR$/Application/Services/Jars/Dto/InputDtoUpdateJar.cs" />
+        <option value="$PROJECT_DIR$/Domain/Jars/IJarFactory.cs" />
+        <option value="$PROJECT_DIR$/Domain/Jars/JarFactory.cs" />
+        <option value="$PROJECT_DIR$/Application/Services/Jars/JarService.cs" />
+        <option value="$PROJECT_DIR$/UnitTest/JarServicesTest.cs" />
+        <option value="$PROJECT_DIR$/UnitTest/UserServicesTest.cs" />
+        <option value="$PROJECT_DIR$/Domain/Transactions/ITransaction.cs" />
+        <option value="$PROJECT_DIR$/Domain/Transactions/Transaction.cs" />
+        <option value="$PROJECT_DIR$/UnitTest/TransactionServicesTest.cs" />
       </list>
     </option>
   </component>
@@ -118,6 +129,8 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34994584" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.30010834" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -125,7 +138,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="RiderCSharpLiveTemplatesSettingsId" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected=".NET Launch Settings Profile.MyMoneyManagerBackend">
@@ -278,7 +291,8 @@
       <workItem from="1607870173906" duration="5669000" />
       <workItem from="1608027091118" duration="25936000" />
       <workItem from="1608106626867" duration="28221000" />
-      <workItem from="1608194410416" duration="9654000" />
+      <workItem from="1608194410416" duration="12326000" />
+      <workItem from="1608282473391" duration="21286000" />
     </task>
     <servers />
   </component>
@@ -289,41 +303,57 @@
     <option name="coveragePercentColumnWidth" value="54" />
     <option name="sortOrder" value="DESCENDING" />
     <option name="sortedColumn" value="1" />
-    <option name="symbolColumnWidth" value="237" />
+    <option name="symbolColumnWidth" value="291" />
     <coverage-tree-state>
       <expand>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 4% 974/1012" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 47% 692/1303" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 4% 974/1012" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="UnitTest 100% 0/26" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 47% 692/1303" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Application 70% 121/400" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 4% 974/1012" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="UnitTest 100% 0/26" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="UnitTest 100% 0/26" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 47% 692/1303" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Application 70% 121/400" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Application 70% 121/400" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 4% 974/1012" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Domain 0% 89/89" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 47% 692/1303" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Application 70% 121/400" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Application 70% 121/400" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Services 70% 115/388" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 4% 974/1012" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Domain 0% 89/89" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Domain 0% 89/89" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 47% 692/1303" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Application 70% 121/400" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Application 70% 121/400" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Services 70% 115/388" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Transactions 43% 43/76" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 4% 974/1012" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Domain 0% 89/89" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Domain 0% 89/89" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Users 0% 39/39" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 47% 692/1303" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Application 70% 121/400" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Application 70% 121/400" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Services 70% 115/388" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Transactions 43% 43/76" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="TransactionService 56% 14/32" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="Total 47% 692/1303" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Application 70% 121/400" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Application 70% 121/400" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Services 70% 115/388" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Transactions 43% 43/76" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="TransactionService 56% 14/32" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Query(Guid,int,int,int) 100% 0/4" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
       </expand>
       <select />
@@ -352,45 +382,110 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="328" y="348" key="#Notifications/0.0.1920.1040@0.0.1920.1040" timestamp="1608029503206" />
-    <state width="1877" height="225" key="GridCell.Tab.0.bottom" timestamp="1608206669111">
+    <state width="1877" height="375" key="GridCell.Tab.0.bottom" timestamp="1608307589020">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="121" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1607469135258" />
     <state width="1877" height="461" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1607878051229" />
-    <state width="1877" height="225" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608206669111" />
-    <state width="1877" height="225" key="GridCell.Tab.0.center" timestamp="1608206669110">
+    <state width="1877" height="375" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608307589020" />
+    <state width="1877" height="375" key="GridCell.Tab.0.center" timestamp="1608307589018">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="121" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1607469135258" />
     <state width="1877" height="461" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1607878051229" />
-    <state width="1877" height="225" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608206669110" />
-    <state width="1877" height="225" key="GridCell.Tab.0.left" timestamp="1608206669110">
+    <state width="1877" height="375" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608307589018" />
+    <state width="1877" height="375" key="GridCell.Tab.0.left" timestamp="1608307589017">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="121" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1607469135258" />
     <state width="1877" height="461" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1607878051229" />
-    <state width="1877" height="225" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608206669110" />
-    <state width="1877" height="225" key="GridCell.Tab.0.right" timestamp="1608206669111">
+    <state width="1877" height="375" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608307589017" />
+    <state width="1877" height="375" key="GridCell.Tab.0.right" timestamp="1608307589019">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="121" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1607469135258" />
     <state width="1877" height="461" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1607878051229" />
-    <state width="1877" height="225" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608206669111" />
+    <state width="1877" height="375" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608307589019" />
+    <state width="1877" height="375" key="GridCell.Tab.1.bottom" timestamp="1608307589021">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608307589021" />
+    <state width="1877" height="375" key="GridCell.Tab.1.center" timestamp="1608307589020">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608307589020" />
+    <state width="1877" height="375" key="GridCell.Tab.1.left" timestamp="1608307589020">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608307589020" />
+    <state width="1877" height="375" key="GridCell.Tab.1.right" timestamp="1608307589021">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608307589021" />
+    <state width="1877" height="375" key="GridCell.Tab.2.bottom" timestamp="1608307589021">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608307589021" />
+    <state width="1877" height="375" key="GridCell.Tab.2.center" timestamp="1608307589021">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608307589021" />
+    <state width="1877" height="375" key="GridCell.Tab.2.left" timestamp="1608307589021">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608307589021" />
+    <state width="1877" height="375" key="GridCell.Tab.2.right" timestamp="1608307589021">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608307589021" />
+    <state width="1877" height="375" key="GridCell.Tab.3.bottom" timestamp="1608307589022">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.3.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608307589022" />
+    <state width="1877" height="375" key="GridCell.Tab.3.center" timestamp="1608307589022">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.3.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608307589022" />
+    <state width="1877" height="375" key="GridCell.Tab.3.left" timestamp="1608307589021">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.3.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608307589021" />
+    <state width="1877" height="375" key="GridCell.Tab.3.right" timestamp="1608307589022">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.3.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608307589022" />
+    <state width="1877" height="375" key="GridCell.Tab.4.bottom" timestamp="1608307589023">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.4.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608307589023" />
+    <state width="1877" height="375" key="GridCell.Tab.4.center" timestamp="1608307589022">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.4.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608307589022" />
+    <state width="1877" height="375" key="GridCell.Tab.4.left" timestamp="1608307589022">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.4.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608307589022" />
+    <state width="1877" height="375" key="GridCell.Tab.4.right" timestamp="1608307589022">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.4.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608307589022" />
     <state x="552" y="252" key="Rider.ProjectTemplateDialog.Size" timestamp="1608038829098">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1368" y="252" key="Rider.ProjectTemplateDialog.Size/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1604995994871" />
     <state x="552" y="252" key="Rider.ProjectTemplateDialog.Size/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1605272940990" />
     <state x="552" y="252" key="Rider.ProjectTemplateDialog.Size/0.0.1920.1040@0.0.1920.1040" timestamp="1608038829098" />
-    <state x="1268" y="209" key="RiderGenerateDialog" timestamp="1608206291064">
+    <state x="1268" y="209" key="RiderGenerateDialog" timestamp="1608306300581">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1268" y="209" key="RiderGenerateDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1607872082073" />
-    <state x="1268" y="209" key="RiderGenerateDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1608206291064" />
-    <state x="461" y="165" key="SettingsEditor" timestamp="1605203313902">
+    <state x="1268" y="209" key="RiderGenerateDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1608306300581" />
+    <state x="461" y="165" key="SettingsEditor" timestamp="1608293933826">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1605203313902" />
+    <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1608293933826" />
     <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog" timestamp="1608145861494">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -400,11 +495,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1605203817663" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1608065763042">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1608301606671">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1297" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1603584775437" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1605985856316" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1608065763042" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1608301606671" />
   </component>
 </project>

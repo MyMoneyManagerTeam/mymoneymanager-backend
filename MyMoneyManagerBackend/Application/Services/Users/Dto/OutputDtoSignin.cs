@@ -21,5 +21,16 @@ namespace Application.Services.Users.Dto
         public OutputDtoSignin()
         {
         }
+
+        protected bool Equals(OutputDtoSignin other)
+        {
+            return Id.Equals(other.Id);
+        }
+
+        public override bool Equals(object obj)
+        {
+            return Equals((OutputDtoSignin) obj);
+        }
+        
     }
 }

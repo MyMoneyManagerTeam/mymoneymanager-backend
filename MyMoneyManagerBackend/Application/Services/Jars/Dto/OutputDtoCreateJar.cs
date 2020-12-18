@@ -10,5 +10,15 @@ namespace Application.Services.Jars.Dto
         public string Name { get; set; }
         public double Max { get; set; }
         public double Balance { get; set; }
+
+        protected bool Equals(OutputDtoCreateJar other)
+        {
+            return Id.Equals(other.Id);
+        }
+
+        public override bool Equals(object obj)
+        {
+            return Equals((OutputDtoCreateJar) obj);
+        }
     }
 }

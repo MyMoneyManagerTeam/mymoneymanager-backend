@@ -21,5 +21,16 @@ namespace Application.Services.Users.Dto
         public OutputDtoAuth()
         {
         }
+
+        protected bool Equals(OutputDtoAuth other)
+        {
+            return Id.Equals(other.Id) && Mail == other.Mail;
+        }
+
+        public override bool Equals(object obj)
+        {
+            return Equals((OutputDtoAuth) obj);
+        }
+        
     }
 }

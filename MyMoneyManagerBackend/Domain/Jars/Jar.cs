@@ -15,5 +15,16 @@ namespace Domain.Jars
         public string Name { get; set; }
         public double Max { get; set; }
         public double Balance { get; set; }
+
+        protected bool Equals(Jar other)
+        {
+            return Id.Equals(other.Id);
+        }
+
+        public override bool Equals(object obj)
+        {
+            return Equals((Jar) obj);
+        }
+        
     }
 }

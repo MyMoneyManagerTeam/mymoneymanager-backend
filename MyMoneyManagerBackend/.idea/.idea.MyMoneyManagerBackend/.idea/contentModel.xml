@@ -157,8 +157,9 @@
       <e p="MyMoneyManagerBackend.sln" t="IncludeFlat" />
       <e p="packages" t="ExcludeRecursive" />
       <e p="UnitTest" t="IncludeRecursive">
-        <e p="AccountDtoTest.cs" t="Include" />
+        <e p="AccountServicesTest.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
+        <e p="JarServicesTest.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp3.1" t="Include">
@@ -166,7 +167,9 @@
             </e>
           </e>
         </e>
+        <e p="TransactionServicesTest.cs" t="Include" />
         <e p="UnitTest.csproj" t="IncludeRecursive" />
+        <e p="UserServicesTest.cs" t="Include" />
       </e>
       <e p="WebAPI" t="IncludeRecursive">
         <e p="appsettings.Development.json" t="Include" />

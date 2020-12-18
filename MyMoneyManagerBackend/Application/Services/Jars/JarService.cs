@@ -49,7 +49,7 @@ namespace Application.Services.Jars
 
         public OutputDtoCreateJar Create(Guid userId,InputDtoCreateJar jar)
         {
-            var jarFromDto = _jarFactory.GetFromParam(new User {Id = userId}, jar.Description, jar.Name, jar.Max, jar.Balance);
+            var jarFromDto = _jarFactory.GetFromParam(new User {Id = userId}, new Guid(), jar.Description, jar.Name, jar.Max, jar.Balance);
             var jarInDb = _jarRepository.Create(jarFromDto);
             if (jarInDb == null)
                 return null;
@@ -66,7 +66,7 @@ namespace Application.Services.Jars
 
         public bool Update(Guid userId, InputDtoUpdateJar jar)
         {
-            var jarFromDto = _jarFactory.GetFromParam(new User {Id = userId}, jar.Description, jar.Name, jar.Max, jar.Balance);
+            var jarFromDto = _jarFactory.GetFromParam(new User {Id = userId},jar.Id,jar.Description, jar.Name, jar.Max, jar.Balance);
             return _jarRepository.Update(jar.Id, jarFromDto);
         }
 

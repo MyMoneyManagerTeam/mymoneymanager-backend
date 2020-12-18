@@ -6,8 +6,8 @@ namespace Domain.Transactions
 {
     public interface ITransaction: IEntity
     {
-        User Emitter { get; set; }
-        User Receiver { get; set; }
+        IUser Emitter { get; set; }
+        IUser Receiver { get; set; }
         double Amount { get; set; }
         DateTime TransactionDate { get; set; }
         string Description { get; set; }

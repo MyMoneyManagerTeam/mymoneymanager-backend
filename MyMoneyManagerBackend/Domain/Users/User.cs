@@ -27,5 +27,15 @@ namespace Domain.Users
         public string Token { get; set; }
         
         public Account Account { get; set; }
+
+        protected bool Equals(User other)
+        {
+            return Id.Equals(other.Id);
+        }
+
+        public override bool Equals(object obj)
+        {
+            return Equals((User) obj);
+        }
     }
 }
