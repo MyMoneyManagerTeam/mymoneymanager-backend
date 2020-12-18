@@ -103,7 +103,6 @@ namespace UnitTest
                 Confirmed = true,
                 Country = "test",
                 Picture = null,
-                Token = "test",
                 Zip = 0,
                 FirstName = "test",
                 LastName = "test"
@@ -120,7 +119,6 @@ namespace UnitTest
                 Confirmed = true,
                 Country = "test",
                 Picture = null,
-                Token = "test",
                 Zip = 0,
                 FirstName = "test",
                 LastName = "test"
@@ -200,7 +198,6 @@ namespace UnitTest
                     Confirmed = true,
                     Country = "test",
                     Picture = null,
-                    Token = "test",
                     Zip = 0,
                     FirstName = "test",
                     LastName = "test"

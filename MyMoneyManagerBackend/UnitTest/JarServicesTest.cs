@@ -7,6 +7,7 @@ using Application.Services.Jars.Dto;
 using Domain.Jars;
 using Domain.Users;
 using NSubstitute;
+using NSubstitute.ReturnsExtensions;
 using NUnit.Framework;
 
 namespace UnitTest
@@ -29,16 +30,32 @@ namespace UnitTest
 
             IEnumerable<IJar> jarList = new List<Jar>
             {
-                new Jar(),
-                new Jar()
+                new Jar
+                {
+                    Id = new Guid(),
+                    Balance = 100,
+                    Description = "test",
+                    Max = 100,
+                    Name = "test",
+                    Owner = new User()
+                },
+                new Jar{
+                    Id = new Guid(),
+                    Balance = 100,
+                    Description = "test",
+                    Max = 100,
+                    Name = "test",
+                    Owner = new User()
+                }
             };
+            
             jarRepository.Query(myGuid).Returns(jarList);
             
             //Act
             var outputTest = jarService.Query(myGuid);
             
             //Assert
-            Assert.AreEqual(2,jarList.Count());
+            Assert.AreEqual(outputTest.Count(),jarList.Count());
         }
 
         [Test]
@@ -113,6 +130,43 @@ namespace UnitTest
             //Assert
             
             Assert.AreEqual(outputDtoCreateJar,OutputTest);
+        }
+        
+        [Test]
+        public void Create_UserIdAndInputDtoCreateJar_ReturnNull()
+        {
+            //Arrange
+            IJarRepository jarRepository = Substitute.For<IJarRepository>();
+            JarService jarService = new JarService(jarRepository);
+            Guid myGuid = new Guid("{fd639119-ce4f-401f-959b-fb8999dc8344}");
+            InputDtoCreateJar inputDtoCreateJar = new InputDtoCreateJar
+            {
+                Balance = 100,
+                Description = "test",
+                Max = 150,
+                Name = "test"
+            };
+            OutputDtoCreateJar outputDtoCreateJar = new OutputDtoCreateJar
+            {
+                Id = myGuid
+            };
+            IJar jarIn = new Jar();
+            IJar jarOut = new Jar
+            {
+                Id = myGuid,
+                Owner = new User
+                {
+                    Id = myGuid
+                }
+            };
+            jarRepository.Create(jarIn).ReturnsNull();
+            
+            //Act
+            var OutputTest = jarService.Create(myGuid, inputDtoCreateJar);
+
+            //Assert
+            
+            Assert.AreEqual(null,OutputTest);
         }
 
         [Test]

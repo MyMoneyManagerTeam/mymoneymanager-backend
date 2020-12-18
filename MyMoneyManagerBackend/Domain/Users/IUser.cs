@@ -17,7 +17,6 @@ namespace Domain.Users
         byte[] Picture { get; set; }
         bool Confirmed { get; set; }
         bool Admin { get; set; }
-        string Token { get; set; }
         Account Account { get; set; }
     }
 }

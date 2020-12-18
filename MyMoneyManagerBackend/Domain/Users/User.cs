@@ -23,9 +23,6 @@ namespace Domain.Users
         public byte[] Picture { get; set; }
         public bool Confirmed { get; set; }
         public bool Admin { get; set; }
-        
-        public string Token { get; set; }
-        
         public Account Account { get; set; }
 
         protected bool Equals(User other)

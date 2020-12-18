@@ -17,5 +17,15 @@ namespace Domain.Transactions
         public Transaction()
         {
         }
+
+        protected bool Equals(Transaction other)
+        {
+            return Id.Equals(other.Id);
+        }
+
+        public override bool Equals(object obj)
+        {
+            return Equals((Transaction) obj);
+        }
     }
 }
