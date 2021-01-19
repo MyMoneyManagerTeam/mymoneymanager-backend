@@ -1,10 +1,10 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "C:\\Users\\Alexi\\OneDrive\\Bureau\\projWebMob\\mymoneymanager-backend\\MyMoneyManagerBackend\\WebAPI\\WebAPI.csproj",
+    "projectUniqueName": "C:\\Users\\Alexi\\OneDrive\\Bureau\\mymoneymanager-backend\\MyMoneyManagerBackend\\WebAPI\\WebAPI.csproj",
     "projectName": "WebAPI",
-    "projectPath": "C:\\Users\\Alexi\\OneDrive\\Bureau\\projWebMob\\mymoneymanager-backend\\MyMoneyManagerBackend\\WebAPI\\WebAPI.csproj",
-    "outputPath": "C:\\Users\\Alexi\\OneDrive\\Bureau\\projWebMob\\mymoneymanager-backend\\MyMoneyManagerBackend\\WebAPI\\obj\\",
+    "projectPath": "C:\\Users\\Alexi\\OneDrive\\Bureau\\mymoneymanager-backend\\MyMoneyManagerBackend\\WebAPI\\WebAPI.csproj",
+    "outputPath": "C:\\Users\\Alexi\\OneDrive\\Bureau\\mymoneymanager-backend\\MyMoneyManagerBackend\\WebAPI\\obj\\",
     "projectStyle": "PackageReference",
     "originalTargetFrameworks": [
       "netcoreapp3.1"
@@ -15,8 +15,8 @@
     "frameworks": {
       "netcoreapp3.1": {
         "projectReferences": {
-          "C:\\Users\\Alexi\\OneDrive\\Bureau\\projWebMob\\mymoneymanager-backend\\MyMoneyManagerBackend\\Infrastructure\\Infrastructure.csproj": {
-            "projectPath": "C:\\Users\\Alexi\\OneDrive\\Bureau\\projWebMob\\mymoneymanager-backend\\MyMoneyManagerBackend\\Infrastructure\\Infrastructure.csproj"
+          "C:\\Users\\Alexi\\OneDrive\\Bureau\\mymoneymanager-backend\\MyMoneyManagerBackend\\Infrastructure\\Infrastructure.csproj": {
+            "projectPath": "C:\\Users\\Alexi\\OneDrive\\Bureau\\mymoneymanager-backend\\MyMoneyManagerBackend\\Infrastructure\\Infrastructure.csproj"
           }
         }
       }

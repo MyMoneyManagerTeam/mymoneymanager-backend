@@ -25,15 +25,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2a471809-f355-4591-a512-e5f8f5a49a17" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MyMoneyManagerBackend/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyMoneyManagerBackend/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MyMoneyManagerBackend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyMoneyManagerBackend/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Exceptions/NegativeTransactionException.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Exceptions/NegativeTransactionException.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Accounts/Account.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Accounts/Account.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Transactions/Transaction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Transactions/Transaction.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Users/IUser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Users/IUser.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Users/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Users/User.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UnitTest/JarServicesTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UnitTest/JarServicesTest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UnitTest/TransactionServicesTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UnitTest/TransactionServicesTest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UnitTest/UserServicesTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UnitTest/UserServicesTest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/SqlServer/Accounts/AccountSqlServer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/SqlServer/Accounts/AccountSqlServer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAPI/obj/Debug/netcoreapp3.1/WebAPI.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/obj/Debug/netcoreapp3.1/WebAPI.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAPI/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAPI/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAPI/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAPI/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,15 +45,12 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/B6CD7678-39A9-4127-B059-4CB5685CB260/A/AuthorizeAttribute.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UnitTest/AccountServicesTest.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/TestProject1/AccountRepositoryTest.cs" />
         <option value="$PROJECT_DIR$/TestProject1/UnitTest1.cs" />
         <option value="$PROJECT_DIR$/UnitTest/MockedDataCreation/AccountCreateData.cs" />
         <option value="$PROJECT_DIR$/UnitTest/AccountRepositoryTest.cs" />
@@ -103,6 +101,7 @@
         <option value="$PROJECT_DIR$/Application/Services/Accounts/Dto/OutputDtoGetAccount.cs" />
         <option value="$PROJECT_DIR$/UnitTest/JarServicesTest.cs" />
         <option value="$PROJECT_DIR$/Application/Exceptions/NegativeTransactionException.cs" />
+        <option value="$PROJECT_DIR$/Application/Exceptions/NotEnoughMoneyException.cs" />
       </list>
     </option>
   </component>
@@ -279,7 +278,9 @@
       <workItem from="1608027091118" duration="25936000" />
       <workItem from="1608106626867" duration="28221000" />
       <workItem from="1608194410416" duration="12326000" />
-      <workItem from="1608282473391" duration="25646000" />
+      <workItem from="1608282473391" duration="27884000" />
+      <workItem from="1611073280937" duration="739000" />
+      <workItem from="1611078094609" duration="1785000" />
     </task>
     <servers />
   </component>
@@ -287,91 +288,99 @@
     <option name="version" value="3" />
   </component>
   <component name="UnitTestsCoverage.Settings">
-    <option name="coveragePercentColumnWidth" value="54" />
+    <option name="coveragePercentColumnWidth" value="120" />
     <option name="sortOrder" value="DESCENDING" />
     <option name="sortedColumn" value="1" />
-    <option name="symbolColumnWidth" value="637" />
+    <option name="symbolColumnWidth" value="424" />
     <coverage-tree-state>
       <expand>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 52% 656/1365" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 52% 650/1359" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 52% 656/1365" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 52% 650/1359" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
           <item name="Domain 100% 0/111" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 52% 656/1365" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 52% 650/1359" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
           <item name="Domain 100% 0/111" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
           <item name="Domain 100% 0/111" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 52% 656/1365" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Application 77% 92/400" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 52% 650/1359" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Application 78% 86/394" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 52% 656/1365" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Application 77% 92/400" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Application 77% 92/400" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 52% 650/1359" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Application 78% 86/394" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Application 78% 86/394" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 52% 656/1365" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Application 77% 92/400" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Application 77% 92/400" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 52% 650/1359" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Application 78% 86/394" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Application 78% 86/394" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Exceptions 100% 0/6" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="Total 52% 650/1359" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Application 78% 86/394" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Application 78% 86/394" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Exceptions 100% 0/6" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="NegativeTransactionException 100% 0/3" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="Total 52% 650/1359" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Application 78% 86/394" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Application 78% 86/394" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Exceptions 100% 0/6" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="NotEnoughMoneyException 100% 0/3" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="Total 52% 650/1359" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Application 78% 86/394" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Application 78% 86/394" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
           <item name="Services 78% 86/388" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 52% 656/1365" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Application 77% 92/400" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Application 77% 92/400" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 52% 650/1359" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Application 78% 86/394" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Application 78% 86/394" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
           <item name="Services 78% 86/388" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
           <item name="Accounts 95% 3/58" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 52% 656/1365" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Application 77% 92/400" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Application 77% 92/400" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 52% 650/1359" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Application 78% 86/394" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Application 78% 86/394" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
           <item name="Services 78% 86/388" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
           <item name="Transactions 80% 15/76" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 52% 656/1365" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Application 77% 92/400" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Application 77% 92/400" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 52% 650/1359" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Application 78% 86/394" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Application 78% 86/394" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
           <item name="Services 78% 86/388" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
           <item name="Jars 77% 22/95" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 52% 656/1365" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Application 77% 92/400" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Application 77% 92/400" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 52% 650/1359" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Application 78% 86/394" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Application 78% 86/394" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
           <item name="Services 78% 86/388" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
           <item name="Users 71% 46/159" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-        </path>
-        <path>
-          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 52% 656/1365" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Application 77% 92/400" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Application 77% 92/400" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Exceptions 50% 6/12" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-        </path>
-        <path>
-          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 52% 656/1365" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Application 77% 92/400" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Application 77% 92/400" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Exceptions 50% 6/12" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="NegativeTransactionException 50% 3/6" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
       </expand>
       <select />
@@ -400,30 +409,30 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="328" y="348" key="#Notifications/0.0.1920.1040@0.0.1920.1040" timestamp="1608029503206" />
-    <state width="1877" height="311" key="GridCell.Tab.0.bottom" timestamp="1608314951800">
+    <state width="1563" height="125" key="GridCell.Tab.0.bottom" timestamp="1611091199641">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="121" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1607469135258" />
     <state width="1877" height="461" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1607878051229" />
-    <state width="1877" height="311" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608314951800" />
-    <state width="1877" height="311" key="GridCell.Tab.0.center" timestamp="1608314951800">
+    <state width="1563" height="125" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1611091199641" />
+    <state width="1563" height="125" key="GridCell.Tab.0.center" timestamp="1611091199641">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="121" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1607469135258" />
     <state width="1877" height="461" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1607878051229" />
-    <state width="1877" height="311" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608314951800" />
-    <state width="1877" height="311" key="GridCell.Tab.0.left" timestamp="1608314951800">
+    <state width="1563" height="125" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1611091199641" />
+    <state width="1563" height="125" key="GridCell.Tab.0.left" timestamp="1611091199641">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="121" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1607469135258" />
     <state width="1877" height="461" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1607878051229" />
-    <state width="1877" height="311" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608314951800" />
-    <state width="1877" height="311" key="GridCell.Tab.0.right" timestamp="1608314951800">
+    <state width="1563" height="125" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1611091199641" />
+    <state width="1563" height="125" key="GridCell.Tab.0.right" timestamp="1611091199641">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="121" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1607469135258" />
     <state width="1877" height="461" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1607878051229" />
-    <state width="1877" height="311" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608314951800" />
+    <state width="1563" height="125" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1611091199641" />
     <state width="1877" height="327" key="GridCell.Tab.1.bottom" timestamp="1608313037256">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
